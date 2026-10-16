@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành grid-template-columns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="page-width">
+            <span class="eyebrow">CSS GRID · THỰC HÀNH</span>
+            <h1>grid-template-columns</h1>
+            <p>Điều chỉnh số cột và chiều rộng từng cột trong một bố cục Grid.</p>
+        </div>
+    </header>
+
+    <main class="page-width">
+        <section class="example" aria-labelledby="equal-title">
+            <div class="example-heading">
+                <span class="example-number">01</span>
+                <div><h2 id="equal-title">Ba cột bằng nhau</h2><p>Sáu ô tự sắp xếp thành hai hàng, mỗi hàng ba cột.</p></div>
+            </div>
+            <div class="grid-container equal-columns" aria-label="Lưới ba cột bằng nhau">
+                <div>Ô 1</div><div>Ô 2</div><div>Ô 3</div>
+                <div>Ô 4</div><div>Ô 5</div><div>Ô 6</div>
+            </div>
+            <pre><code>display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;</code></pre>
+            <p class="explanation"><strong>Ba giá trị <code>1fr</code></strong> tạo ba cột cùng chia đều phần không gian khả dụng.</p>
+        </section>
+
+        <section class="example" aria-labelledby="mixed-title">
+            <div class="example-heading">
+                <span class="example-number green">02</span>
+                <div><h2 id="mixed-title">Các cột có kích thước khác nhau</h2><p>Cột đầu rộng 100px, cột thứ hai rộng 200px, cột cuối nhận phần còn lại.</p></div>
+            </div>
+            <div class="grid-scroll" tabindex="0" aria-label="Lưới có thể cuộn ngang trên màn hình hẹp">
+                <div class="grid-container mixed-columns">
+                    <div>Cột 1<br><small>100px</small></div>
+                    <div>Cột 2<br><small>200px</small></div>
+                    <div>Cột 3<br><small>1fr · phần còn lại</small></div>
+                    <div>Cột 1<br><small>100px</small></div>
+                    <div>Cột 2<br><small>200px</small></div>
+                    <div>Cột 3<br><small>1fr · phần còn lại</small></div>
+                </div>
+            </div>
+            <pre><code>display: grid;
+grid-template-columns: 100px 200px 1fr;
+gap: 10px;</code></pre>
+            <p class="explanation"><strong>Các giá trị có thể kết hợp</strong> độ dài cố định với đơn vị phân số <code>fr</code>.</p>
+        </section>
+    </main>
+
+    <footer>© 2026 · Bài thực hành CSS Grid</footer>
+</body>
+</html>
