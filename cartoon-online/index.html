@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101b34">
+    <title>Mầm Phim — Góc hoạt hình an toàn</title>
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Mầm Phim - Trang chủ">
+            <span class="brand-mark" aria-hidden="true">✦</span>
+            <span>Mầm<span class="brand-accent">Phim</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Điều hướng chính">
+            <a class="nav-link active" href="#home">Trang chủ</a>
+            <a class="nav-link" href="#catalog">Phim hoạt hình</a>
+            <a class="nav-link" href="#about">Giới thiệu</a>
+        </nav>
+
+        <a class="header-pill" href="#catalog"><span aria-hidden="true">▶</span> Chọn phim</a>
+    </header>
+
+    <main id="home">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <span class="eyebrow"><span class="eyebrow-dot"></span> THẾ GIỚI PHIM NHỎ</span>
+                <h1 id="hero-title">Cùng con khám phá<br><span>những câu chuyện hay</span></h1>
+                <p>Góc xem hoạt hình thân thiện cho cả gia đình. Chọn một bộ phim, ngồi thật thoải mái và bắt đầu chuyến phiêu lưu nhé!</p>
+                <a class="primary-button" href="#catalog">Khám phá phim <span aria-hidden="true">↓</span></a>
+                <div class="hero-note"><span aria-hidden="true">✓</span> Giao diện gọn gàng · Không đặt banner quảng cáo</div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="sun"></div>
+                <div class="cloud cloud-one"></div>
+                <div class="cloud cloud-two"></div>
+                <div class="hill hill-back"></div>
+                <div class="hill hill-front"></div>
+                <div class="hero-character">🐰</div>
+                <span class="sparkle sparkle-one">✦</span>
+                <span class="sparkle sparkle-two">✧</span>
+                <span class="hero-caption">Bắt đầu chuyến phiêu lưu!</span>
+            </div>
+        </section>
+
+        <section class="catalog-section" id="catalog" aria-labelledby="catalog-title">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">GÓC GIẢI TRÍ</span>
+                    <h2 id="catalog-title">Chọn phim bạn thích</h2>
+                    <p class="section-subtitle">Các video minh họa được chọn để thực hành giao diện phát phim.</p>
+                </div>
+                <div class="catalog-tools">
+                    <label class="search-box">
+                        <span class="sr-only">Tìm phim theo tên</span>
+                        <span class="search-icon" aria-hidden="true">⌕</span>
+                        <input id="search-input" type="search" placeholder="Tìm tên phim..." autocomplete="off">
+                        <kbd>/</kbd>
+                    </label>
+                    <label class="sort-control">
+                        <span class="sr-only">Sắp xếp danh sách phim</span>
+                        <select id="sort-select">
+                            <option value="latest">Mới cập nhật</option>
+                            <option value="popular">Xem nhiều nhất</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <div class="watch-layout">
+                <aside class="movie-panel" aria-label="Danh sách phim">
+                    <div class="panel-heading">
+                        <h3>Danh sách phim</h3>
+                        <span id="movie-count" class="count-badge">2 phim</span>
+                    </div>
+                    <div id="movie-list" class="movie-list" aria-live="polite"></div>
+                    <p id="empty-state" class="empty-state" hidden>Chưa tìm thấy phim phù hợp. Thử từ khóa khác nhé!</p>
+                    <div class="panel-tip"><span aria-hidden="true">💡</span> Chọn phim để xem ngay</div>
+                </aside>
+
+                <section class="player-panel" aria-labelledby="player-title">
+                    <div class="player-topline">
+                        <div>
+                            <span class="now-watching"><span></span> ĐANG PHÁT</span>
+                            <h3 id="player-title">Big Buck Bunny</h3>
+                        </div>
+                        <span class="quality-badge">HD · 720P–1080P</span>
+                    </div>
+                    <div class="player-frame">
+                        <iframe id="youtube-player"
+                            src="https://www.youtube-nocookie.com/embed/Vpg9yizPP_g?rel=0"
+                            title="Big Buck Bunny — video minh họa trên YouTube"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                        <video id="html5-player" controls preload="metadata" playsinline hidden>
+                            <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                            Trình duyệt của bạn không hỗ trợ phát video HTML5.
+                        </video>
+                    </div>
+                    <div class="player-controls">
+                        <div class="player-tabs" role="group" aria-label="Chọn cách phát video">
+                            <button class="player-tab active" type="button" data-player="youtube" aria-pressed="true">YouTube</button>
+                            <button class="player-tab" type="button" data-player="html5" aria-pressed="false">HTML5 video</button>
+                        </div>
+                        <span class="player-hint">Chọn trình phát để xem video minh họa</span>
+                    </div>
+                    <div class="player-description">
+                        <span class="film-avatar" aria-hidden="true">🐇</span>
+                        <div>
+                            <strong id="description-title">Big Buck Bunny</strong>
+                            <p id="description-meta">Phim ngắn hoạt hình · Blender Open Movie</p>
+                        </div>
+                        <span class="views" id="view-count">◎ 12,8 N lượt xem</span>
+                    </div>
+                    <p class="media-note">Video nhúng là nội dung minh họa. Khi sử dụng thực tế, hãy thay bằng phim có bản quyền và thuyết minh tiếng Việt; quảng cáo trong trình phát bên thứ ba do nền tảng đó kiểm soát.</p>
+                </section>
+            </div>
+        </section>
+
+        <section class="promise-section" id="about" aria-label="Thông tin website">
+            <div class="promise-icon" aria-hidden="true">🌱</div>
+            <div>
+                <h2>Một góc nhỏ cho những điều tích cực</h2>
+                <p>Mẫu giao diện tập trung vào nội dung, dễ tìm phim và dễ sử dụng trên máy tính lẫn điện thoại.</p>
+            </div>
+            <a href="#catalog" class="text-link">Quay lại danh sách <span aria-hidden="true">↗</span></a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">✦</span><span>Mầm<span class="brand-accent">Phim</span></span></a>
+        <p>© 2026 Mầm Phim. Giao diện thực hành HTML &amp; CSS.</p>
+        <a href="#about">Về chúng tôi</a>
+    </footer>
+</body>
+</html>
