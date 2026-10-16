@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 42px 18px;
+    background-color: #e9f1f3;
+    color: #26394a;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    width: min(100%, 900px);
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 10px;
+    color: #174b5a;
+    text-align: center;
+}
+
+main > p {
+    margin: 0 auto 26px;
+    color: #526979;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.featured-content {
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    border: 1px solid #b3d1d4;
+    border-radius: 16px;
+    background-color: #236879;
+    background-image: linear-gradient(120deg, rgb(12 48 67 / 68%), rgb(26 105 111 / 40%)), url("hero-background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+.featured-copy {
+    max-width: 560px;
+}
+
+.eyebrow {
+    color: #c1f0e7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.featured-content h2 {
+    margin: 10px 0;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.2;
+}
+
+.featured-content p:last-child {
+    margin-bottom: 0;
+    color: #e7f6f4;
+    font-size: 17px;
+    line-height: 1.6;
+}
