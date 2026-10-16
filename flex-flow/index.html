@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hai ví dụ kết hợp flex-direction và flex-wrap bằng CSS flex-flow.">
+    <title>Thực hành CSS | flex-flow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <p class="eyebrow">CSS FLEXBOX · THỰC HÀNH</p>
+        <h1>Kết hợp hướng và xuống dòng với <code>flex-flow</code></h1>
+        <p><code>flex-flow</code> là shorthand của <code>flex-direction</code> và <code>flex-wrap</code>, được khai báo trên Flex Container.</p>
+    </header>
+
+    <main class="examples">
+        <section class="demo-card" aria-labelledby="row-title">
+            <div class="demo-heading">
+                <span class="number">01</span>
+                <div><h2>Theo hàng, không xuống dòng</h2><code>flex-flow: row nowrap;</code></div>
+            </div>
+            <p>Các item xếp theo hướng đọc từ trái sang phải trên cùng một hàng.</p>
+            <div class="stage">
+                <div class="axis"><span>START</span><span class="axis-line">→</span><span>END</span></div>
+                <div class="flex-container row-flow" aria-label="Ba item xếp từ trái sang phải trên một hàng">
+                    <div class="item blue">1</div><div class="item blue">2</div><div class="item blue">3</div>
+                </div>
+            </div>
+            <p class="code-note">Các item giữ nguyên trên một hàng; nếu thiếu chỗ, vùng minh họa có thể cuộn ngang.</p>
+        </section>
+
+        <section class="demo-card" aria-labelledby="reverse-title">
+            <div class="demo-heading">
+                <span class="number">02</span>
+                <div><h2>Hàng theo hướng ngược</h2><code>flex-flow: row-reverse nowrap;</code></div>
+            </div>
+            <p>Hướng hàng đảo ngược, nên item cuối trong HTML xuất hiện phía trái.</p>
+            <div class="stage">
+                <div class="axis reverse-axis"><span>START</span><span class="axis-line">←</span><span>END</span></div>
+                <div class="flex-container reverse-flow" aria-label="Ba item xếp theo hàng từ phải sang trái">
+                    <div class="item green">1</div><div class="item green">2</div><div class="item green">3</div>
+                </div>
+            </div>
+            <p class="code-note">Thứ tự DOM vẫn là 1, 2, 3; hướng flex đảo vị trí hiển thị trên hàng.</p>
+        </section>
+
+        <aside class="info-note">
+            <span class="note-mark">i</span>
+            <p>Trong cả hai ví dụ, <code>nowrap</code> giữ các Flex Item trên một hàng. Thay phần đầu bằng <code>column</code> hoặc phần sau bằng <code>wrap</code> để thử các kiểu bố trí khác.</p>
+        </aside>
+    </main>
+
+    <footer>Thực hành CSS Flexbox <span>·</span> <code>flex-flow = flex-direction + flex-wrap</code></footer>
+</body>
+</html>

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: #19243b;
+    background: #f3f6fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+}
+
+code {
+    color: #315fe8;
+    font-family: "Space Mono", Consolas, monospace;
+}
+
+.hero {
+    padding: 54px max(22px, calc((100% - 1000px) / 2)) 40px;
+    color: #f8faff;
+    background: #17264a;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: #96b2ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+h1 {
+    max-width: 850px;
+    margin: 0;
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.2;
+}
+
+h1 code {
+    color: #a8c1ff;
+    font-size: .82em;
+}
+
+.hero > p:last-child {
+    max-width: 720px;
+    margin: 16px 0 0;
+    color: #d1daf0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.hero > p:last-child code {
+    color: #c3d2ff;
+}
+
+.examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 18px;
+    width: min(1020px, calc(100% - 40px));
+    margin: 32px auto 24px;
+}
+
+.demo-card {
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid #e1e7f1;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 32px rgb(22 42 83 / 5%);
+}
+
+.demo-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.number {
+    display: grid;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 12px;
+    color: #315fe8;
+    background: #edf2ff;
+    font-family: "Space Mono", Consolas, monospace;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0 0 3px;
+    font-size: 18px;
+}
+
+.demo-heading code {
+    font-size: 10px;
+}
+
+.demo-card > p {
+    min-height: 54px;
+    margin: 16px 0;
+    color: #66728a;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.stage {
+    overflow-x: auto;
+    padding: 13px;
+    border: 1px dashed #bac7de;
+    border-radius: 12px;
+    background: #f7f9fd;
+}
+
+.axis {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 10px;
+    color: #7b879c;
+    font-family: "Space Mono", Consolas, monospace;
+    font-size: 9px;
+}
+
+.axis-line {
+    color: #416df0;
+    font-size: 17px;
+}
+
+.reverse-axis {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    width: max-content;
+    min-width: 100%;
+    min-height: 112px;
+    padding: 10px;
+    border: 1px solid #e0e6f0;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.row-flow {
+    flex-flow: row nowrap;
+}
+
+.reverse-flow {
+    flex-flow: row-reverse nowrap;
+}
+
+.item {
+    display: grid;
+    flex: 0 0 100px;
+    min-height: 80px;
+    place-items: center;
+    border-radius: 9px;
+    color: #fff;
+    font-family: "Space Mono", Consolas, monospace;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.item.blue {
+    background: #416df0;
+}
+
+.item.green {
+    background: #2b9a70;
+}
+
+.demo-card > .code-note {
+    min-height: 0;
+    margin: 12px 0 0;
+    color: #7a879d;
+    font-size: 11px;
+}
+
+.info-note {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 18px;
+    border: 1px solid #d9e3fb;
+    border-radius: 12px;
+    color: #475878;
+    background: #eaf0ff;
+}
+
+.note-mark {
+    display: grid;
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #416df0;
+    font-family: Georgia, serif;
+    font-weight: 700;
+}
+
+.info-note p {
+    margin: 1px 0 0;
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.info-note code {
+    font-size: 10px;
+}
+
+footer {
+    padding: 18px 22px 26px;
+    color: #77839a;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer span {
+    padding: 0 5px;
+}
+
+@media (max-width: 520px) {
+    .hero {
+        padding: 40px 22px 32px;
+    }
+
+    .hero > p:last-child {
+        font-size: 14px;
+    }
+
+    .examples {
+        width: calc(100% - 24px);
+        gap: 14px;
+        margin-top: 18px;
+    }
+
+    .demo-card {
+        padding: 18px 14px;
+    }
+
+    .demo-card > p {
+        min-height: 0;
+    }
+
+    .info-note {
+        grid-column: auto;
+    }
+}
