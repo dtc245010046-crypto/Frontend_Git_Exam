@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minh họa ba cách dùng thuộc tính CSS grid-column-start.">
+    <title>Thực hành CSS Grid | grid-column-start</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <p class="eyebrow">CSS GRID · THỰC HÀNH</p>
+        <h1>Thuộc tính <code>grid-column-start</code></h1>
+        <p class="intro">Khám phá cách đặt vị trí bắt đầu của một Grid Item bằng <code>auto</code>, <code>span</code> và số đường kẻ cột.</p>
+    </header>
+
+    <main class="examples">
+        <section class="demo-card" aria-labelledby="auto-title">
+            <div class="demo-heading">
+                <span class="demo-number">01</span>
+                <div>
+                    <h2 id="auto-title">Luồng sắp xếp mặc định</h2>
+                    <p><code>grid-column-start: auto;</code></p>
+                </div>
+            </div>
+            <p class="description">Giá trị <code>auto</code> không đặt vị trí bắt đầu cụ thể. Grid xếp các ô lần lượt theo luồng tự động.</p>
+            <div class="grid-demo auto-grid" aria-label="Lưới ba cột với các ô được tự động sắp xếp">
+                <div class="grid-item featured">1 <small>auto</small></div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <p class="code-note">Lưới có 3 cột; các ô tiếp tục sang hàng mới khi hàng hiện tại đã đầy.</p>
+        </section>
+
+        <section class="demo-card" aria-labelledby="span-title">
+            <div class="demo-heading">
+                <span class="demo-number">02</span>
+                <div>
+                    <h2 id="span-title">Bắt đầu theo khoảng span</h2>
+                    <p><code>grid-column-start: span 2;</code></p>
+                </div>
+            </div>
+            <p class="description">Giá trị <code>span 2</code> yêu cầu Grid dành hai track cột cho ô này. Trong ví dụ, ô đầu tiên chiếm hai cột.</p>
+            <div class="grid-demo span-grid" aria-label="Lưới bốn cột, ô đầu tiên kéo dài qua hai cột">
+                <div class="grid-item featured span-item">Item 1 <small>span 2</small></div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+            <p class="code-note">Vị trí cụ thể được Grid tự động tính toán dựa trên luồng đặt item.</p>
+        </section>
+
+        <section class="demo-card" aria-labelledby="line-title">
+            <div class="demo-heading">
+                <span class="demo-number">03</span>
+                <div>
+                    <h2 id="line-title">Bắt đầu tại đường cột</h2>
+                    <p><code>grid-column-start: 2;</code></p>
+                </div>
+            </div>
+            <p class="description">Số <code>2</code> đặt cạnh trái của item tại đường cột số 2. Item bắt đầu ở cột thứ hai và tiếp tục theo luồng Grid.</p>
+            <div class="line-ruler" aria-hidden="true">
+                <span>Đường 1</span><span>Đường 2</span><span>Đường 3</span><span>Đường 4</span><span>Đường 5</span>
+            </div>
+            <div class="grid-demo line-grid" aria-label="Lưới bốn cột, item đầu tiên bắt đầu tại đường cột thứ hai">
+                <div class="grid-item featured line-item">Item 1 <small>bắt đầu ở line 2</small></div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">Thực hành CSS Grid · <code>grid-column-start</code></footer>
+</body>
+</html>
