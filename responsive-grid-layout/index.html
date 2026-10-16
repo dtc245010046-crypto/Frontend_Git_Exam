@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bài tập bố cục website responsive với CSS Grid.">
+    <title>Bố cục responsive bằng CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-grid">
+        <header class="header" id="top">
+            <a class="brand" href="#top"><span class="brand-icon">N</span> Nhịp Sống Số</a>
+            <span class="header-caption">Góc nhìn công nghệ và đời sống</span>
+        </header>
+
+        <nav class="navigation" aria-label="Điều hướng chính">
+            <a class="current" href="#home">Trang chủ</a>
+            <a href="#technology">Công nghệ</a>
+            <a href="#learning">Học tập</a>
+            <a href="#lifestyle">Đời sống</a>
+            <a href="#about">Giới thiệu</a>
+        </nav>
+
+        <main class="main-content" id="home">
+            <section class="lead-story" id="technology">
+                <div class="story-art" role="img" aria-label="Minh họa trừu tượng về công nghệ số">
+                    <span class="art-orbit orbit-one"></span>
+                    <span class="art-orbit orbit-two"></span>
+                    <span class="art-core">01</span>
+                    <span class="art-caption">IDEAS / DIGITAL</span>
+                </div>
+                <div class="story-copy">
+                    <p class="kicker">CÔNG NGHỆ · 6 PHÚT ĐỌC</p>
+                    <h1>Thiết kế web responsive bắt đầu từ một bố cục tốt</h1>
+                    <p>Một giao diện rõ ràng giúp nội dung dễ đọc trên màn hình lớn, đồng thời vẫn gọn gàng khi xem trên điện thoại.</p>
+                    <a class="read-more" href="#learning">Đọc bài viết <span aria-hidden="true">→</span></a>
+                </div>
+            </section>
+
+            <section class="latest" id="learning">
+                <div class="section-title">
+                    <div><p class="kicker">MỚI CẬP NHẬT</p><h2>Bài viết nổi bật</h2></div>
+                    <a href="#about">Xem tất cả <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="article-grid">
+                    <article class="article-card">
+                        <span class="article-number">01</span>
+                        <p class="kicker">HỌC TẬP</p>
+                        <h3>Học HTML theo cách thực hành</h3>
+                        <p>Bắt đầu từ cấu trúc tài liệu, rồi xây từng phần của trang web.</p>
+                    </article>
+                    <article class="article-card">
+                        <span class="article-number coral">02</span>
+                        <p class="kicker">ĐỜI SỐNG</p>
+                        <h3>Sắp xếp thời gian học hiệu quả</h3>
+                        <p>Chia mục tiêu lớn thành những phiên học ngắn và đều đặn.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar" id="lifestyle">
+            <section class="side-panel">
+                <p class="kicker">ĐANG ĐƯỢC QUAN TÂM</p>
+                <h2>Đọc nhanh</h2>
+                <a class="trending-link" href="#technology"><span>01</span><strong>CSS Grid giúp chia vùng trang như thế nào?</strong><small>4 phút đọc</small></a>
+                <a class="trending-link" href="#learning"><span>02</span><strong>Ba thói quen nhỏ để học lập trình mỗi ngày</strong><small>5 phút đọc</small></a>
+                <a class="trending-link" href="#about"><span>03</span><strong>Tối ưu trải nghiệm trên màn hình điện thoại</strong><small>3 phút đọc</small></a>
+            </section>
+            <section class="newsletter">
+                <span class="newsletter-icon">✳</span>
+                <h2>Mỗi tuần một ý tưởng mới</h2>
+                <p>Ghé lại để khám phá thêm những bài viết ngắn về web và học tập.</p>
+                <a href="#about">Tìm hiểu thêm <span aria-hidden="true">→</span></a>
+            </section>
+        </aside>
+
+        <footer class="footer" id="about">
+            <span>© 2026 Nhịp Sống Số</span>
+            <span>Thực hành CSS Grid responsive</span>
+            <a href="#top">Lên đầu trang ↑</a>
+        </footer>
+    </div>
+</body>
+</html>
