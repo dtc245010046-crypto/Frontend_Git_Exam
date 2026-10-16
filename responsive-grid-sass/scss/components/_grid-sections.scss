@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.grid-content--top-banner {
+  @include full-width-color($color-top-banner);
+}
+
+.grid-content--bottom-banner {
+  @include full-width-color($color-bottom-banner);
+}
+
+.grid-content--feature {
+  width: $feature-width;
+  padding: 15px 0 0;
+  border: 0;
+  background-color: $color-feature;
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.grid-content--feature-last {
+  width: $feature-width;
+}
+
+.feature-bar {
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+  border: 0;
+  background-color: $color-feature-bar;
+
+  &--last {
+    margin-bottom: 0;
+  }
+
+  &--tall {
+    height: 92%;
+    margin-bottom: 0;
+  }
+}
+
+.grid-content--blank {
+  border: 0;
+  background-color: $color-feature;
+}

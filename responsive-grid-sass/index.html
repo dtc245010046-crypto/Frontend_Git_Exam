@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive 12-column grid demo refactored with Sass.">
+    <title>Responsive Grid — Sass Refactor</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="grid-demo">
+        <div class="grid-container grid-container--foreground" aria-hidden="true">
+            <div class="grid-wrapper grid-wrapper--banner">
+                <div class="grid-content grid-content--top-banner"></div>
+            </div>
+
+            <div class="grid-wrapper grid-wrapper--main">
+                <div class="grid-content grid-content--feature">
+                    <div class="feature-bar"></div>
+                    <div class="feature-bar"></div>
+                    <div class="feature-bar"></div>
+                    <div class="feature-bar feature-bar--last"></div>
+                </div>
+                <div class="grid-content grid-content--blank"></div>
+                <div class="grid-content grid-content--blank"></div>
+                <div class="grid-content grid-content--blank"></div>
+                <div class="grid-content grid-content--blank"></div>
+                <div class="grid-content grid-content--blank"></div>
+                <div class="grid-content grid-content--blank"></div>
+                <div class="grid-content grid-content--feature grid-content--feature-last">
+                    <div class="feature-bar feature-bar--tall"></div>
+                </div>
+            </div>
+
+            <div class="grid-wrapper grid-wrapper--footer">
+                <div class="grid-content grid-content--bottom-banner"></div>
+            </div>
+        </div>
+
+        <div class="grid-container grid-container--guide" aria-hidden="true">
+            <div class="grid-wrapper grid-wrapper--guide">
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+                <div class="grid-content grid-content--guide"></div>
+            </div>
+        </div>
+    </main>
+
+    <p class="grid-caption">Resize the browser window to see that this grid responds to the available width.</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@mixin grid-row($height) {
+  height: $height;
+}
+
+@mixin full-width-color($color) {
+  width: 100%;
+  background-color: $color;
+  border-right-color: transparent;
+}

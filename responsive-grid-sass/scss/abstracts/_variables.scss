@@ -1,0 +1,21 @@
+@use "sass:math";
+
+$color-canvas: #f1f1f1;
+$color-grid-line: #808080;
+$color-guide-line: #000;
+$color-feature: #fff;
+$color-feature-bar: #33b5e5;
+$color-top-banner: #9933cc;
+$color-bottom-banner: #0099cc;
+
+$grid-columns: 12;
+$column-width: math.div(100%, $grid-columns);
+$feature-width: 25%;
+$guide-opacity: 0.1;
+$foreground-opacity: 0.9;
+
+$height-banner: 90px;
+$height-main: 230px;
+$height-footer: 50px;
+$height-guide: 370px;
+

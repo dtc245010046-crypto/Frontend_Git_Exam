@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as *;
+
+.grid-demo {
+  position: relative;
+  min-height: $height-guide;
+  width: 100%;
+}
+
+.grid-container {
+  width: 100%;
+}
+
+.grid-container--foreground {
+  position: absolute;
+  z-index: 1;
+  inset: 0 10px 0 8px;
+  width: auto;
+  opacity: $foreground-opacity;
+}
+
+.grid-container--guide {
+  position: absolute;
+  inset: 0;
+  opacity: $guide-opacity;
+}
+
+.grid-wrapper {
+  position: relative;
+  overflow: auto;
+  height: 250px;
+}
+
+.grid-wrapper--banner {
+  height: $height-banner;
+}
+
+.grid-wrapper--main {
+  height: $height-main;
+}
+
+.grid-wrapper--footer {
+  height: $height-footer;
+}
+
+.grid-wrapper--guide {
+  height: $height-guide;
+}
+
+.grid-content {
+  float: left;
+  width: $column-width;
+  height: 100%;
+  margin: 0;
+  border-right: 1px solid $color-grid-line;
+  background-color: $color-canvas;
+}
+
+.grid-content--guide {
+  background-color: $color-feature;
+  border-right: 1px solid $color-guide-line;
+
+  &:first-child {
+    border-left: 1px solid $color-guide-line;
+  }
+}
+
+.grid-caption {
+  margin: 16px 0 0;
+  line-height: 1.5;
+}
