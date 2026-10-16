@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ba ví dụ thay đổi vị trí và kích thước Grid Item bằng CSS grid-row.">
+    <title>Thực hành CSS Grid | grid-row</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <p class="eyebrow">CSS GRID · THỰC HÀNH</p>
+        <h1>Điều khiển hàng với <code>grid-row</code></h1>
+        <p>So sánh điểm bắt đầu và độ kéo dài của một Grid Item trên lưới ba cột, ba hàng.</p>
+    </header>
+
+    <main class="examples">
+        <section class="demo-card" aria-labelledby="first-title">
+            <div class="demo-heading">
+                <span class="number">01</span>
+                <div>
+                    <h2 id="first-title">Bắt đầu từ hàng 1</h2>
+                    <code>grid-row: 1 / 3;</code>
+                </div>
+            </div>
+            <p>Ô 1 bắt đầu ở đường hàng 1 và kết thúc tại đường hàng 3, nên chiếm hai hàng đầu.</p>
+            <div class="grid grid-first" aria-label="Ô 1 chiếm hàng thứ nhất và thứ hai">
+                <div class="item item1">Ô 1 <small>hàng 1–2</small></div>
+                <div class="item">Ô 2</div><div class="item">Ô 3</div>
+                <div class="item">Ô 4</div><div class="item">Ô 5</div><div class="item">Ô 6</div>
+            </div>
+        </section>
+
+        <section class="demo-card" aria-labelledby="second-title">
+            <div class="demo-heading">
+                <span class="number">02</span>
+                <div>
+                    <h2 id="second-title">Bắt đầu từ hàng 2</h2>
+                    <code>grid-row: 2 / 4;</code>
+                </div>
+            </div>
+            <p>Ô 1 dịch xuống một hàng; nó kéo dài từ đường hàng 2 đến đường hàng 4.</p>
+            <div class="grid grid-second" aria-label="Ô 1 chiếm hàng thứ hai và thứ ba">
+                <div class="item item1">Ô 1 <small>hàng 2–3</small></div>
+                <div class="item">Ô 2</div><div class="item">Ô 3</div>
+                <div class="item">Ô 4</div><div class="item">Ô 5</div><div class="item">Ô 6</div>
+            </div>
+        </section>
+
+        <section class="demo-card" aria-labelledby="span-title">
+            <div class="demo-heading">
+                <span class="number">03</span>
+                <div>
+                    <h2 id="span-title">Kéo dài hai hàng</h2>
+                    <code>grid-row: span 2;</code>
+                </div>
+            </div>
+            <p>Chỉ định độ dài hai hàng; Grid tự chọn vị trí bắt đầu phù hợp theo luồng sắp xếp.</p>
+            <div class="grid grid-span" aria-label="Ô 1 được tự động đặt và chiếm hai hàng">
+                <div class="item item1">Ô 1 <small>span 2</small></div>
+                <div class="item">Ô 2</div><div class="item">Ô 3</div>
+                <div class="item">Ô 4</div><div class="item">Ô 5</div><div class="item">Ô 6</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>Thực hành CSS Grid <span>·</span> <code>grid-row</code></footer>
+</body>
+</html>
