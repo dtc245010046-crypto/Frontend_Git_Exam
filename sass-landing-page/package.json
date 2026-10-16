@@ -1,0 +1,13 @@
+{
+  "name": "codegym-career-landing-sass",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CodeGym Career landing page stylesheet refactored to Sass.",
+  "scripts": {
+    "build": "sass scss/main.scss css/styles.css --no-source-map",
+    "watch": "sass --watch scss/main.scss:css/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

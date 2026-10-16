@@ -1,0 +1,358 @@
+/* ==========================================================================
+   CodeGym Career Landing Page - Material Design Custom Styling
+   ========================================================================== */
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $cg-text;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* 1. Navbar */
+.navbar {
+  @include transition(all 0.3s ease);
+  font-weight: 500;
+}
+
+.navbar .nav-link {
+  font-size: 15px;
+  padding: 0.7rem 1rem !important;
+  @include transition(color 0.2s ease);
+}
+
+.brand-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navbar .brand-text {
+  color: #fff;
+}
+
+.navbar.scrolled-nav .brand-text {
+  color: $cg-primary-dark;
+}
+
+.brand-code-icon {
+  font-size: 24px;
+}
+
+.brand-badge {
+  background: $cg-accent;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-left: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* 2. Hero Section */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #0d47a1 0%, #1976d2 60%, #42a5f5 100%);
+  color: #ffffff;
+  padding: 130px 0 90px;
+  overflow: hidden;
+}
+
+.hero-shape-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-shape-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 48px;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.hero-badge-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-card-stat {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 24px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* 3. Section Titles */
+.section-heading {
+  margin-bottom: 55px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0d47a1;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: $cg-accent;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: $cg-text-light;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* 4. Feature Cards */
+.feature-card {
+  border: none;
+  border-radius: 12px;
+  @include transition(all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1));
+  box-shadow: $cg-card-shadow;
+  height: 100%;
+  @include card-hover;
+
+}
+
+.icon-box-round {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.icon-blue { background: #e3f2fd; color: #1565c0; }
+.icon-amber { background: #fff8e1; color: #ff8f00; }
+.icon-teal { background: #e0f2f1; color: #00897b; }
+.icon-purple { background: #f3e5f5; color: #7b1fa2; }
+
+/* 5. Roadmap Timeline Step Cards */
+.step-number {
+  width: 38px;
+  height: 38px;
+  background: $cg-accent;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 8px rgba(255, 111, 0, 0.3);
+}
+
+/* 6. Partner Logos */
+.partner-logo-box {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #757575;
+  @include transition(all 0.2s ease);
+  height: 70px;
+}
+
+.partner-logo-box:hover {
+  border-color: #1976d2;
+  color: #1565c0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* 7. Testimonial Card */
+.testimonial-card {
+  border-radius: 12px;
+  border-top: 4px solid $cg-accent;
+  box-shadow: $cg-card-shadow;
+  padding: 24px;
+  background: #ffffff;
+  height: 100%;
+}
+
+.avatar-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1976d2;
+}
+
+/* 8. Call to Action (CTA) Section */
+.cta-section {
+  background: linear-gradient(135deg, #ff6f00 0%, #e65100 100%);
+  color: #ffffff;
+  padding: 70px 0;
+  position: relative;
+}
+
+.cta-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+/* 9. Buttons Material Style */
+.btn-material-primary {
+  background-color: $cg-primary !important;
+  color: #fff !important;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px rgba(21, 101, 192, 0.4);
+}
+
+.btn-material-primary:hover {
+  background-color: $cg-primary-dark !important;
+  box-shadow: 0 6px 20px rgba(21, 101, 192, 0.5);
+}
+
+.btn-material-accent {
+  background-color: $cg-accent !important;
+  color: #fff !important;
+  border-radius: 50px;
+  padding: 14px 34px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 6px 18px rgba(255, 111, 0, 0.45);
+  @include transition(all 0.25s ease);
+}
+
+.btn-material-accent:hover {
+  background-color: $cg-accent-hover !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 111, 0, 0.55);
+}
+
+.btn-material-white {
+  background-color: #ffffff !important;
+  color: $cg-accent-hover !important;
+  border-radius: 50px;
+  padding: 14px 36px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.btn-material-white:hover {
+  background-color: #fff8e1 !important;
+  transform: translateY(-2px);
+}
+
+/* 10. Footer */
+.page-footer {
+  background-color: #1a237e;
+  color: #e0e0e0;
+}
+
+.page-footer a {
+  color: #90caf9;
+  @include transition(color 0.2s ease);
+}
+
+.page-footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Styles previously embedded in HTML attributes */
+.mission-card {
+  border-radius: 14px;
+  background: #f0f7ff;
+}
+
+.testimonial-quote {
+  font-size: 14.5px;
+}
+
+.consultation-card {
+  border-radius: 16px;
+}
+
+.course-select {
+  height: 48px;
+  border-radius: 6px;
+  border-color: #ced4da;
+}
+
+.social-link {
+  &--facebook { background: #3b5998; }
+  &--youtube { background: #ed302f; }
+  &--linkedin { background: #0082ca; }
+}
+
+.footer-copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-subtitle {
+    font-size: 15px;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+  .hero-section {
+    padding: 100px 0 60px;
+  }
+}
+
+
+
