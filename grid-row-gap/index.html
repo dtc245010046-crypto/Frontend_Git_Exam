@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ví dụ CSS Grid về khoảng cách giữa các hàng với grid-row-gap.">
+    <title>Thực hành CSS Grid | grid-row-gap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <p class="eyebrow">CSS GRID · THỰC HÀNH</p>
+        <h1>Khoảng cách giữa các hàng với <code>grid-row-gap</code></h1>
+        <p>Thử khoảng cách cố định, phần trăm và các giá trị toàn cục trên những lưới độc lập.</p>
+    </header>
+
+    <main class="lesson-grid">
+        <section class="example-card" aria-labelledby="length-title">
+            <div class="section-heading">
+                <span class="number">01</span>
+                <div>
+                    <h2 id="length-title">Độ dài cố định</h2>
+                    <code>grid-row-gap: 20px;</code>
+                </div>
+            </div>
+            <p>Khoảng trống giữa mỗi hàng luôn là 20px.</p>
+            <div class="grid-example length-grid" aria-label="Lưới hai cột có khoảng cách hàng 20 pixel">
+                <div>Ô 1</div><div>Ô 2</div>
+                <div>Ô 3</div><div>Ô 4</div>
+            </div>
+        </section>
+
+        <section class="example-card" aria-labelledby="percent-title">
+            <div class="section-heading">
+                <span class="number">02</span>
+                <div>
+                    <h2 id="percent-title">Giá trị phần trăm</h2>
+                    <code>grid-row-gap: 5%;</code>
+                </div>
+            </div>
+            <p>Vùng lưới có chiều cao xác định để thấy rõ khoảng cách phần trăm giữa các hàng.</p>
+            <div class="grid-example percent-grid" aria-label="Lưới hai cột có khoảng cách hàng 5 phần trăm">
+                <div>Ô 1</div><div>Ô 2</div>
+                <div>Ô 3</div><div>Ô 4</div>
+            </div>
+            <p class="hint">Mỗi khoảng cách là 5% chiều cao vùng chứa Grid.</p>
+        </section>
+
+        <section class="example-card global-card" aria-labelledby="global-title">
+            <div class="section-heading">
+                <span class="number">03</span>
+                <div>
+                    <h2 id="global-title">Các giá trị toàn cục</h2>
+                    <code>initial · inherit · unset · revert</code>
+                </div>
+            </div>
+            <p>Mỗi ví dụ có hai hàng. Khung ngoài đặt giá trị 18px; các lưới con dùng từ khóa tương ứng.</p>
+            <div class="global-examples">
+                <article class="global-case">
+                    <h3><code>initial</code><span>mặc định: 0</span></h3>
+                    <div class="global-frame"><div class="grid-example global-grid initial-grid"><div>A</div><div>B</div></div></div>
+                </article>
+                <article class="global-case">
+                    <h3><code>inherit</code><span>kế thừa: 18px</span></h3>
+                    <div class="global-frame inherit-frame"><div class="grid-example global-grid inherit-grid"><div>A</div><div>B</div></div></div>
+                </article>
+                <article class="global-case">
+                    <h3><code>unset</code><span>không kế thừa: 0</span></h3>
+                    <div class="global-frame"><div class="grid-example global-grid unset-grid"><div>A</div><div>B</div></div></div>
+                </article>
+                <article class="global-case">
+                    <h3><code>revert</code><span>quay về giá trị trước</span></h3>
+                    <div class="global-frame"><div class="grid-example global-grid revert-grid"><div>A</div><div>B</div></div></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>Thực hành CSS Grid <span>·</span> <code>grid-row-gap</code> là tên thuộc tính cũ; CSS hiện đại thường dùng <code>row-gap</code>.</footer>
+</body>
+</html>
