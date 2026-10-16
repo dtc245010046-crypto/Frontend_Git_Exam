@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bố cục trang responsive với Bootstrap Container, Navbar và Grid System.">
+    <title>Bootstrap Grid System | Góc Công Nghệ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container py-4 py-lg-5">
+            <p class="eyebrow">KIẾN THỨC · CÔNG NGHỆ · SÁNG TẠO</p>
+            <h1>Góc Công Nghệ</h1>
+            <p class="header-copy">Ý tưởng hữu ích cho hành trình khám phá thế giới số.</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home"><span class="brand-mark">G</span> GCT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
+                aria-controls="siteNav" aria-expanded="false" aria-label="Mở hoặc đóng menu điều hướng">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#articles">Bài viết</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#topics" role="button" data-bs-toggle="dropdown" aria-expanded="false">Chủ đề</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#web">Thiết kế Web</a></li>
+                            <li><a class="dropdown-item" href="#learning">Học tập số</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#resources">Tài nguyên</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4 py-lg-5" id="home">
+        <div class="row g-4 g-lg-5">
+            <section class="col-12 col-lg-8" id="articles">
+                <article class="featured-article">
+                    <div class="article-art" role="img" aria-label="Minh họa trừu tượng về kết nối số">
+                        <span class="art-ring ring-one"></span><span class="art-ring ring-two"></span><span class="art-core">01</span>
+                        <span class="art-caption">DIGITAL IDEAS</span>
+                    </div>
+                    <div class="article-copy">
+                        <p class="eyebrow">BÀI VIẾT NỔI BẬT · 6 PHÚT ĐỌC</p>
+                        <h2>Bootstrap Grid: bắt đầu từ những cột linh hoạt</h2>
+                        <p>Container và hệ thống lưới giúp bạn chia nội dung thành các khu vực rõ ràng, đồng thời dễ dàng điều chỉnh bố cục theo kích thước màn hình.</p>
+                        <a class="read-link" href="#web">Đọc bài viết <span aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+
+                <section class="more-articles mt-4" id="topics">
+                    <div class="d-flex justify-content-between align-items-end mb-3">
+                        <div><p class="eyebrow mb-1">KHÁM PHÁ THÊM</p><h2 class="section-title">Bài viết mới</h2></div>
+                        <a class="small-link" href="#resources">Xem tất cả ↗</a>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                        <article class="col" id="web"><div class="article-card h-100"><span class="category-tag tag-blue">THIẾT KẾ WEB</span><h3>Chọn bố cục phù hợp cho nội dung</h3><p>Bắt đầu từ nhu cầu người đọc để tạo trải nghiệm dễ theo dõi.</p><span class="read-time">5 phút đọc</span></div></article>
+                        <article class="col" id="learning"><div class="article-card h-100"><span class="category-tag tag-green">HỌC TẬP SỐ</span><h3>Biến việc học thành thói quen</h3><p>Một kế hoạch nhỏ và đều đặn có thể tạo nên tiến bộ lớn.</p><span class="read-time">4 phút đọc</span></div></article>
+                    </div>
+                </section>
+            </section>
+
+            <aside class="col-12 col-lg-4" id="about">
+                <div class="sidebar-stack">
+                    <section class="sidebar-card">
+                        <p class="eyebrow">GIỚI THIỆU</p>
+                        <h2>Chào mừng bạn đến với Góc Công Nghệ</h2>
+                        <p>Nơi chia sẻ kiến thức thực hành về thiết kế web, công cụ số và những cách học hiệu quả.</p>
+                        <a class="read-link" href="#resources">Tìm hiểu thêm <span aria-hidden="true">→</span></a>
+                    </section>
+                    <section class="sidebar-card popular-card">
+                        <p class="eyebrow">ĐỌC NHIỀU</p>
+                        <h2>Bạn có thể thích</h2>
+                        <a class="popular-link" href="#web"><span>01</span><strong>5 nguyên tắc tạo giao diện dễ đọc</strong></a>
+                        <a class="popular-link" href="#learning"><span>02</span><strong>Cách tổ chức tài nguyên học tập</strong></a>
+                        <a class="popular-link" href="#resources"><span>03</span><strong>Responsive là gì và vì sao cần?</strong></a>
+                    </section>
+                    <section class="resource-banner" id="resources">
+                        <span class="resource-icon">✦</span>
+                        <p class="eyebrow">TÀI NGUYÊN</p>
+                        <h2>Học bằng cách thực hành.</h2>
+                        <p>Mỗi bài viết là một bước nhỏ để bạn xây dựng kỹ năng số vững chắc.</p>
+                    </section>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2 py-4">
+            <span>© 2026 Góc Công Nghệ</span>
+            <span>Thực hành Bootstrap Container & Grid System</span>
+            <a href="#home">Về đầu trang ↑</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
