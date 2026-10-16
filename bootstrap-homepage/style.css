@@ -1,0 +1,70 @@
+:root {
+    --brand: #4f6df5;
+    --brand-dark: #3f56d4;
+    --ink: #17213b;
+    --soft-blue: #eef2ff;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { color: var(--ink); font-family: Inter, "Segoe UI", Arial, sans-serif; }
+.navbar { min-height: 68px; box-shadow: 0 3px 16px rgba(14, 26, 59, .12); }
+.navbar-brand { letter-spacing: -.03em; }
+.navbar-brand i { color: #91a4ff; }
+.nav-link { margin-left: .65rem; }
+.nav-link:hover, .nav-link:focus { color: #aebcff !important; }
+.hero-section, .carousel, .carousel-inner, .carousel-item { position: relative; }
+.hero-image { height: min(680px, 72vh); min-height: 470px; object-fit: cover; }
+.carousel-item::after { position: absolute; inset: 0; z-index: 0; content: ""; background: linear-gradient(90deg, rgba(12, 23, 55, .74), rgba(12, 23, 55, .16) 73%); }
+.carousel-item:nth-child(2)::after { background: linear-gradient(90deg, rgba(9, 36, 49, .62), rgba(9, 36, 49, .08) 78%); }
+.carousel-item:nth-child(3)::after { background: linear-gradient(90deg, rgba(36, 22, 67, .1), rgba(36, 22, 67, .68)); }
+.carousel-caption { z-index: 1; right: 13%; bottom: 14%; left: 13%; max-width: 660px; padding: 1rem 0 2.7rem; text-shadow: none; }
+.carousel-caption h1, .carousel-caption h2 { margin: .75rem 0; font-size: clamp(2.7rem, 6vw, 5.25rem); font-weight: 800; letter-spacing: -.06em; line-height: 1.02; }
+.carousel-caption p { max-width: 490px; margin: 0 0 1.5rem; color: rgba(255, 255, 255, .88); font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.65; }
+.carousel-caption .btn { border-color: var(--brand); background: var(--brand); font-size: .98rem; font-weight: 600; }
+.carousel-caption .btn:hover { border-color: var(--brand-dark); background: var(--brand-dark); }
+.hero-kicker, .section-kicker { color: #a9baff; font-size: .76rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+.section-kicker { color: var(--brand); }
+.carousel-indicators [data-bs-target] { width: 9px; height: 9px; border: 0; border-radius: 50%; }
+.carousel-control-prev, .carousel-control-next { z-index: 2; width: 9%; }
+.welcome-section { min-height: 260px; background: #f6f8ff; }
+.welcome-copy { max-width: 850px; }
+.welcome-copy h2 { color: var(--ink); letter-spacing: -.04em; }
+.welcome-copy p { max-width: 690px; margin-right: auto; margin-left: auto; }
+.services-section { background: white; }
+.about-image { display: block; width: 100%; max-height: 360px; object-fit: cover; background: var(--soft-blue); }
+.service-heading h2 { color: var(--ink); }
+.service-card { border: 1px solid #e8ebf5; background: white; box-shadow: 0 8px 25px rgba(31, 48, 91, .045); transition: transform .2s ease, box-shadow .2s ease; }
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 14px 32px rgba(31, 48, 91, .1); }
+.service-icon { display: flex; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 16px; background: var(--soft-blue); color: var(--brand); font-size: 1.25rem; }
+.service-card p { font-size: .94rem; line-height: 1.65; }
+.contact-section { background: #f6f8ff; }
+.contact-card { border: 1px solid #e7eaf4; background: white; box-shadow: 0 15px 45px rgba(31, 48, 91, .07); }
+.contact-card h2 { color: var(--ink); }
+.contact-card .form-label { color: #3b4965; font-weight: 600; }
+.contact-card .form-control { border-color: #dfe4ef; border-radius: 12px; box-shadow: none; }
+.contact-card .form-control:focus { border-color: #8194ff; box-shadow: 0 0 0 .22rem rgba(79, 109, 245, .14); }
+.contact-card .btn-primary { border-color: var(--brand); background: var(--brand); font-weight: 600; }
+.contact-card .btn-primary:hover { border-color: var(--brand-dark); background: var(--brand-dark); }
+.site-footer { background: #151d33; }
+.social-links a { color: #bac5e4; }
+.social-links a:hover { color: white; }
+
+@media (max-width: 767.98px) {
+    .navbar { min-height: 60px; }
+    .nav-link { margin-left: 0; }
+    .hero-image { height: 580px; min-height: 0; }
+    .carousel-caption { right: 12%; bottom: 13%; left: 12%; padding-bottom: 2.1rem; }
+    .carousel-caption h1, .carousel-caption h2 { font-size: clamp(2.65rem, 11vw, 4rem); }
+    .carousel-caption p { max-width: 390px; font-size: 1rem; }
+    .carousel-item:nth-child(3) .carousel-caption { text-align: left !important; }
+    .welcome-section { min-height: 230px; }
+    .welcome-copy h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 420px) {
+    .hero-image { height: 540px; }
+    .carousel-caption { right: 10%; left: 10%; }
+    .carousel-caption h1, .carousel-caption h2 { font-size: 2.55rem; }
+    .carousel-caption p { font-size: .92rem; }
+    .carousel-caption .btn { padding: .65rem 1rem !important; font-size: .9rem; }
+}
