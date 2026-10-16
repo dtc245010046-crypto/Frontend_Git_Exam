@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 36px 24px;
+    background-color: #f3f6f9;
+    color: #263449;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: min(100%, 900px);
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 8px;
+    color: #183c5a;
+}
+
+p {
+    margin: 0 0 22px;
+    color: #576a7a;
+}
+
+#menu {
+    position: relative;
+    z-index: 1;
+    background-color: #202832;
+}
+
+#menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#menu > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#menu li {
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    width: 150px;
+    height: 46px;
+    padding: 0 14px;
+    color: #fff;
+    line-height: 46px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#menu a:hover,
+#menu a:focus-visible {
+    background-color: #d93636;
+    color: #fff;
+}
+
+#menu ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #202832;
+    box-shadow: 0 8px 18px rgb(0 0 0 / 18%);
+    transition: opacity 140ms ease;
+}
+
+#menu li:hover > ul,
+#menu li:focus-within > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 680px) {
+    #menu > ul {
+        display: block;
+    }
+
+    #menu > ul > li > a {
+        width: 100%;
+        text-align: left;
+    }
+
+    #menu ul ul {
+        position: static;
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        box-shadow: none;
+    }
+
+    #menu li:hover > ul,
+    #menu li:focus-within > ul {
+        display: block;
+    }
+
+    #menu ul ul a {
+        padding-left: 30px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #menu ul ul {
+        transition: none;
+    }
+}
