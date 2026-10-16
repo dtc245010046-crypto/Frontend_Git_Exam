@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký thành công - Xác nhận tài khoản</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="auth-wrapper">
+    <main class="auth-card success-card">
+      <!-- Animated Success Checkmark -->
+      <div class="success-icon-wrap" aria-hidden="true">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1 class="success-title">Đăng ký thành công!</h1>
+      <p class="success-desc">
+        Chúc mừng bạn đã tạo tài khoản thành công. Chúng tôi đã gửi email kích hoạt tài khoản đến địa chỉ của bạn.
+      </p>
+
+      <!-- User Account Summary Preview -->
+      <div class="user-summary-card">
+        <div class="summary-row">
+          <span class="summary-label">Họ và tên:</span>
+          <span class="summary-val" id="displayFullName">Nguyễn Văn An</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Email đăng ký:</span>
+          <span class="summary-val" id="displayEmail">an.nguyen@example.com</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Thời gian kích hoạt:</span>
+          <span class="summary-val" id="displayTime">Vừa xong</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons (Fitts' Law: Large primary button & clear secondary alternative) -->
+      <a href="#" class="submit-btn" style="text-decoration: none;" onclick="alert('Chuyển tới Bảng điều khiển (Dashboard)!'); return false;">
+        <span>Đi tới Bảng điều khiển</span>
+        <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+
+      <a href="register.html" class="btn-secondary">
+        Đăng ký tài khoản khác
+      </a>
+    </main>
+
+    <footer class="auth-footer">
+      <p>Cần hỗ trợ? <a href="#">Trung tâm trợ giúp</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Lấy thông tin truyền từ sessionStorage hoặc URL params
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name') || sessionStorage.getItem('reg_name');
+    const email = params.get('email') || sessionStorage.getItem('reg_email');
+
+    if (name) {
+      document.getElementById('displayFullName').textContent = name;
+    }
+    if (email) {
+      document.getElementById('displayEmail').textContent = email;
+    }
+    document.getElementById('displayTime').textContent = new Date().toLocaleTimeString('vi-VN', {
+      hour: '2-digit',
+      minute: '2-digit',
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    });
+  </script>
+</body>
+</html>
