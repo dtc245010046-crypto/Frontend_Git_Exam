@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo sát khách hàng</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 16px;
+            background: #f3f6fb;
+            color: #273449;
+            font-family: Arial, sans-serif;
+        }
+
+        .survey-card {
+            width: min(100%, 680px);
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #e1e8f0;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 12px 32px rgb(34 61 95 / 10%);
+        }
+
+        header {
+            padding: 28px 32px;
+            background: #176b87;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 26px;
+        }
+
+        header p {
+            margin: 0;
+            color: #e4f5fa;
+            line-height: 1.5;
+        }
+
+        form {
+            padding: 28px 32px 32px;
+        }
+
+        .field {
+            margin-bottom: 22px;
+        }
+
+        .field > label,
+        legend {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #c8d4e1;
+            border-radius: 6px;
+            background: #fff;
+            color: inherit;
+            font: inherit;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #1684a5;
+            outline: 3px solid rgb(22 132 165 / 14%);
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        fieldset {
+            margin: 0 0 22px;
+            padding: 0;
+            border: 0;
+        }
+
+        legend {
+            padding: 0;
+        }
+
+        .choices {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+        }
+
+        .choices label {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .rating {
+            justify-content: space-between;
+            max-width: 420px;
+        }
+
+        .rating label {
+            flex-direction: column;
+            gap: 6px;
+            color: #526176;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: 0;
+            border-radius: 6px;
+            background: #176b87;
+            color: #fff;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #10576f;
+        }
+
+        @media (max-width: 520px) {
+            header,
+            form {
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+            .rating {
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="survey-card">
+        <header>
+            <h1>Khảo sát khách hàng</h1>
+            <p>Ý kiến của bạn giúp chúng tôi cải thiện sản phẩm và dịch vụ. Cảm ơn bạn đã dành thời gian chia sẻ!</p>
+        </header>
+
+        <form>
+            <div class="field">
+                <label for="customer-name">Họ và tên</label>
+                <input type="text" id="customer-name" name="name" autocomplete="name" placeholder="Nhập họ và tên">
+            </div>
+
+            <div class="field">
+                <label for="customer-email">Email</label>
+                <input type="email" id="customer-email" name="email" autocomplete="email" placeholder="ban@example.com">
+            </div>
+
+            <div class="field">
+                <label for="product">Bạn đã sử dụng sản phẩm hoặc dịch vụ nào?</label>
+                <select id="product" name="product">
+                    <option value="" selected disabled>Chọn một mục</option>
+                    <option value="product">Sản phẩm</option>
+                    <option value="support">Dịch vụ hỗ trợ khách hàng</option>
+                    <option value="website">Website</option>
+                    <option value="other">Khác</option>
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>Bạn hài lòng với trải nghiệm tổng thể ở mức nào?</legend>
+                <div class="choices rating">
+                    <label><input type="radio" name="satisfaction" value="1" required> 1<br>Rất không hài lòng</label>
+                    <label><input type="radio" name="satisfaction" value="2"> 2</label>
+                    <label><input type="radio" name="satisfaction" value="3"> 3</label>
+                    <label><input type="radio" name="satisfaction" value="4"> 4</label>
+                    <label><input type="radio" name="satisfaction" value="5"> 5<br>Rất hài lòng</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Điều gì chúng tôi có thể cải thiện?</legend>
+                <div class="choices">
+                    <label><input type="checkbox" name="improvements" value="quality"> Chất lượng sản phẩm</label>
+                    <label><input type="checkbox" name="improvements" value="service"> Dịch vụ khách hàng</label>
+                    <label><input type="checkbox" name="improvements" value="delivery"> Thời gian giao hàng</label>
+                    <label><input type="checkbox" name="improvements" value="website"> Trải nghiệm website</label>
+                </div>
+            </fieldset>
+
+            <div class="field">
+                <label for="comments">Bạn có góp ý hoặc đề xuất nào khác không?</label>
+                <textarea id="comments" name="comments" placeholder="Chia sẻ ý kiến của bạn tại đây"></textarea>
+            </div>
+
+            <button type="submit">Gửi khảo sát</button>
+        </form>
+    </main>
+</body>
+</html>
