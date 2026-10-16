@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bố cục trang responsive với CSS Grid, gồm header, sidebar, nội dung chính và footer.">
+    <title>Bố cục trang web với CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a class="brand" href="#home" aria-label="Trang chủ GridSpace">
+                <span class="brand-mark">G</span>
+                <span>GridSpace</span>
+            </a>
+            <span class="header-note">Thực hành CSS Grid</span>
+        </header>
+
+        <nav class="sidebar" aria-label="Điều hướng chính">
+            <p class="sidebar-label">KHÔNG GIAN HỌC TẬP</p>
+            <a class="nav-link active" href="#home"><span>⌂</span> Tổng quan</a>
+            <a class="nav-link" href="#lessons"><span>▤</span> Bài học</a>
+            <a class="nav-link" href="#projects"><span>◇</span> Dự án</a>
+            <a class="nav-link" href="#resources"><span>↗</span> Tài nguyên</a>
+            <div class="sidebar-tip">
+                <span class="tip-icon">✦</span>
+                <strong>Mẹo nhỏ</strong>
+                <p>Thay đổi kích thước cửa sổ để xem bố cục chuyển sang dạng di động.</p>
+            </div>
+        </nav>
+
+        <main class="content" id="home">
+            <section class="welcome">
+                <p class="eyebrow">THỨ TƯ, 16 THÁNG 10</p>
+                <h1>Chào mừng trở lại!</h1>
+                <p>Đây là khu vực nội dung chính. CSS Grid giúp chia trang thành những vùng rõ ràng và dễ thích ứng.</p>
+            </section>
+
+            <section class="content-grid" aria-label="Thông tin học tập">
+                <article class="info-card featured-card" id="lessons">
+                    <span class="card-icon blue">▦</span>
+                    <p class="card-label">LỘ TRÌNH HIỆN TẠI</p>
+                    <h2>CSS Grid căn bản</h2>
+                    <p>Tìm hiểu cách tạo cột, hàng và sắp xếp phần tử bằng Grid.</p>
+                    <div class="progress-row"><span>Tiến độ</span><strong>65%</strong></div>
+                    <div class="progress-track"><span></span></div>
+                </article>
+                <article class="info-card" id="projects">
+                    <span class="card-icon violet">✧</span>
+                    <p class="card-label">DỰ ÁN MỚI</p>
+                    <h2>Trang portfolio</h2>
+                    <p>Áp dụng Grid để tạo các vùng nội dung responsive.</p>
+                    <a class="text-link" href="#resources">Xem chi tiết <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="info-card resource-card" id="resources">
+                    <span class="card-icon green">⌘</span>
+                    <p class="card-label">TÀI NGUYÊN</p>
+                    <h2>Ghi nhớ nhanh</h2>
+                    <p><code>grid-template-areas</code> đặt tên cho các vùng; media query giúp đổi bố cục trên mobile.</p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>© 2026 GridSpace</span>
+            <span>Được xây dựng để luyện tập CSS Grid</span>
+        </footer>
+    </div>
+</body>
+</html>
