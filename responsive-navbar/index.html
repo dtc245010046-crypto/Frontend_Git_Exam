@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#172641">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar" aria-label="Điều hướng chính">
+        <a class="logo" href="#home" aria-label="MyWebsite - Trang chủ">
+            <span class="logo-mark" aria-hidden="true">M</span>
+            <span>My<span>Website</span></span>
+        </a>
+
+        <ul class="nav-links" id="primary-menu">
+            <li><a class="current" href="#home">Trang chủ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+
+        <a class="nav-cta" href="#contact">Bắt đầu <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="Mở menu" aria-controls="primary-menu" aria-expanded="false">
+            <span class="menu-icon" aria-hidden="true">☰</span>
+        </button>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+                <span class="eyebrow"><span></span> KHÔNG GIAN SÁNG TẠO</span>
+                <h1>Một trải nghiệm<br><em>đơn giản hơn.</em></h1>
+                <p>Thanh điều hướng linh hoạt cho mọi kích thước màn hình. Thu nhỏ cửa sổ để thử menu trên điện thoại.</p>
+                <a class="hero-button" href="#about">Khám phá thêm <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="visual-circle circle-back"></div>
+                <div class="visual-circle circle-front"></div>
+                <div class="visual-card"><span>✦</span><strong>Design<br>with care.</strong><small>GOOD IDEAS START HERE</small></div>
+                <span class="visual-sparkle sparkle-a">✳</span>
+                <span class="visual-sparkle sparkle-b">✦</span>
+            </div>
+        </section>
+
+        <section class="info-grid" id="about" aria-label="Thông tin website">
+            <article id="services"><span class="number">01</span><h2>Giới thiệu</h2><p>Menu desktop hiển thị đầy đủ liên kết theo hàng ngang.</p></article>
+            <article><span class="number">02</span><h2>Dịch vụ</h2><p>Trên màn hình nhỏ, nút menu mở danh sách điều hướng.</p></article>
+            <article id="contact"><span class="number">03</span><h2>Liên hệ</h2><p>Chọn một mục để di chuyển đến phần nội dung tương ứng.</p></article>
+        </section>
+    </main>
+
+    <footer>© 2026 MyWebsite · Responsive Navbar Practice</footer>
+</body>
+</html>
