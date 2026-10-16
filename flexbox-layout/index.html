@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bố cục trang responsive xây dựng bằng CSS Flexbox.">
+    <title>Bố cục trang web với CSS Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a class="brand" href="#home"><span class="brand-mark">F</span> FlexSpace</a>
+            <span class="header-tagline">Không gian học tập và sáng tạo</span>
+        </header>
+
+        <nav class="nav" aria-label="Điều hướng chính">
+            <a class="active" href="#home">Trang chủ</a>
+            <a href="#topics">Chủ đề</a>
+            <a href="#news">Tin mới</a>
+            <a href="#about">Giới thiệu</a>
+        </nav>
+
+        <div class="main-container" id="home">
+            <main class="content">
+                <section class="welcome">
+                    <p class="eyebrow">BẮT ĐẦU HỌC HÔM NAY</p>
+                    <h1>Một bố cục linh hoạt cho mọi màn hình</h1>
+                    <p>Flexbox sắp xếp nội dung theo hàng hoặc cột, giúp các khu vực trên trang thích nghi với không gian sẵn có.</p>
+                    <a href="#topics" class="button">Khám phá chủ đề <span aria-hidden="true">→</span></a>
+                </section>
+
+                <section class="topics" id="topics">
+                    <div class="section-heading">
+                        <div><p class="eyebrow">KHÁM PHÁ</p><h2>Chủ đề nổi bật</h2></div>
+                        <span class="topic-count">03 chủ đề</span>
+                    </div>
+                    <div class="topic-list">
+                        <article class="topic-card">
+                            <span class="topic-icon blue">01</span>
+                            <div><h3>HTML nền tảng</h3><p>Tạo cấu trúc nội dung cho trang web.</p></div>
+                            <span class="arrow" aria-hidden="true">↗</span>
+                        </article>
+                        <article class="topic-card">
+                            <span class="topic-icon purple">02</span>
+                            <div><h3>CSS hiện đại</h3><p>Trang trí và xây dựng bố cục responsive.</p></div>
+                            <span class="arrow" aria-hidden="true">↗</span>
+                        </article>
+                        <article class="topic-card">
+                            <span class="topic-icon green">03</span>
+                            <div><h3>JavaScript cơ bản</h3><p>Thêm tương tác vào giao diện.</p></div>
+                            <span class="arrow" aria-hidden="true">↗</span>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="sidebar" id="news">
+                <section class="side-panel">
+                    <p class="eyebrow">CẬP NHẬT</p>
+                    <h2>Tin mới</h2>
+                    <article class="news-item"><span class="news-date">16 THÁNG 10</span><h3>Flexbox giúp sắp xếp giao diện ra sao?</h3><p>Đọc trong 4 phút</p></article>
+                    <article class="news-item"><span class="news-date">12 THÁNG 10</span><h3>Những thuộc tính CSS nên biết</h3><p>Đọc trong 6 phút</p></article>
+                </section>
+                <section class="tip-panel">
+                    <span class="tip-icon">✦</span>
+                    <h2>Mẹo học tập</h2>
+                    <p>Thử thay đổi kích thước màn hình để quan sát sidebar chuyển xuống dưới nội dung chính.</p>
+                </section>
+            </aside>
+        </div>
+
+        <footer class="footer" id="about">
+            <span>© 2026 FlexSpace</span>
+            <span>Trang thực hành CSS Flexbox</span>
+            <a href="#home">Lên đầu trang ↑</a>
+        </footer>
+    </div>
+</body>
+</html>
