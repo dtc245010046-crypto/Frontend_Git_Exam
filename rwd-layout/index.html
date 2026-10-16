@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#17334d">
+    <title>Trang thông tin — RWD Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-shell">
+        <div class="site-header" id="top">
+            <a class="brand" href="#top" aria-label="Bản tin Campus - Trang chủ">
+                <span class="brand-mark" aria-hidden="true">C</span>
+                <span><strong>CAMPUS</strong><small>BẢN TIN CỘNG ĐỒNG</small></span>
+            </a>
+            <div class="header-message">
+                <span>THỨ SÁU, 16 THÁNG 10, 2026</span>
+                <strong>Cùng nhau học hỏi mỗi ngày</strong>
+            </div>
+        </div>
+
+        <div class="top-nav" aria-label="Điều hướng chính">
+            <a class="active" href="#top">Trang chủ</a>
+            <a href="#stories">Tin mới</a>
+            <a href="#learning">Học tập</a>
+            <a href="#community">Cộng đồng</a>
+            <a href="#footer">Liên hệ</a>
+        </div>
+
+        <div class="page-layout">
+            <div class="left-panel">
+                <div class="panel-title"><span class="title-icon">☰</span><h2>Chuyên mục</h2></div>
+                <a class="category-link selected" href="#stories"><span>✦</span>Tin nổi bật<i>04</i></a>
+                <a class="category-link" href="#learning"><span>▤</span>Học tập<i>12</i></a>
+                <a class="category-link" href="#community"><span>♧</span>Đời sống<i>08</i></a>
+                <a class="category-link" href="#events"><span>◷</span>Sự kiện<i>06</i></a>
+                <div class="side-note">
+                    <span class="note-art" aria-hidden="true">🌱</span>
+                    <strong>Mỗi ngày một bước</strong>
+                    <p>Kiến thức mới bắt đầu từ sự tò mò.</p>
+                    <a href="#learning">Khám phá bài học →</a>
+                </div>
+            </div>
+
+            <div class="main-content" id="stories">
+                <div class="feature-card">
+                    <div class="feature-visual" aria-hidden="true">
+                        <span class="feature-sun"></span>
+                        <span class="feature-cloud cloud-a"></span>
+                        <span class="feature-cloud cloud-b"></span>
+                        <span class="feature-hill hill-a"></span>
+                        <span class="feature-hill hill-b"></span>
+                        <span class="feature-book">📖</span>
+                        <span class="visual-tag">CAMPUS LIFE</span>
+                    </div>
+                    <div class="feature-copy">
+                        <span class="category-label">CÂU CHUYỆN HÔM NAY</span>
+                        <h1>Khám phá những ý tưởng làm nên điều khác biệt</h1>
+                        <p>Nơi chia sẻ câu chuyện, kiến thức và cảm hứng từ cộng đồng học tập năng động.</p>
+                        <a href="#learning" class="read-link">Đọc bài viết <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+
+                <div class="content-heading">
+                    <div><span class="category-label">ĐỪNG BỎ LỠ</span><h2>Bài viết mới nhất</h2></div>
+                    <a href="#stories">Xem tất cả →</a>
+                </div>
+
+                <div class="story-list">
+                    <div class="story-card" id="learning">
+                        <div class="story-icon blue" aria-hidden="true">⌘</div>
+                        <div class="story-copy"><span>HỌC TẬP · 5 PHÚT ĐỌC</span><h3>Bắt đầu hành trình xây dựng trang web đầu tiên</h3><p>Từng bước làm quen với HTML, CSS và cách tạo nên một giao diện thân thiện.</p></div>
+                        <a href="#learning" aria-label="Đọc bài xây dựng trang web">↗</a>
+                    </div>
+                    <div class="story-card" id="community">
+                        <div class="story-icon green" aria-hidden="true">♧</div>
+                        <div class="story-copy"><span>CỘNG ĐỒNG · 3 PHÚT ĐỌC</span><h3>Kết nối và cùng nhau phát triển</h3><p>Những hoạt động giúp bạn gặp gỡ, chia sẻ và học hỏi từ bạn bè.</p></div>
+                        <a href="#community" aria-label="Đọc bài về cộng đồng">↗</a>
+                    </div>
+                    <div class="story-card" id="events">
+                        <div class="story-icon orange" aria-hidden="true">◷</div>
+                        <div class="story-copy"><span>SỰ KIỆN · 4 PHÚT ĐỌC</span><h3>Lịch hoạt động nổi bật trong tháng</h3><p>Đánh dấu những buổi gặp gỡ và trải nghiệm sắp diễn ra.</p></div>
+                        <a href="#events" aria-label="Xem lịch hoạt động">↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="widget calendar-widget">
+                    <div class="widget-heading"><h2>Lịch tháng 10</h2><span>2026</span></div>
+                    <div class="calendar-grid" aria-label="Lịch tháng 10 năm 2026">
+                        <span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span>
+                        <span class="muted">28</span><span class="muted">29</span><span class="muted">30</span><span class="muted">1</span><span>2</span><span>3</span><span>4</span>
+                        <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+                        <span>12</span><span>13</span><span>14</span><span>15</span><span class="today">16</span><span>17</span><span>18</span>
+                        <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+                        <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span class="muted">1</span>
+                    </div>
+                </div>
+                <div class="widget progress-widget">
+                    <div class="widget-heading"><h2>Tiến độ tuần này</h2><span class="live">●</span></div>
+                    <strong>4 <small>/ 5 ngày</small></strong>
+                    <p>Bạn đang duy trì nhịp học rất tốt.</p>
+                    <div class="progress-track"><span></span></div>
+                    <div class="progress-labels"><span>Tiếp tục nhé!</span><span>80%</span></div>
+                </div>
+                <div class="widget reminder-widget">
+                    <div class="widget-heading"><h2>Gợi ý hôm nay</h2><span>✦</span></div>
+                    <p>“Hành trình vạn dặm bắt đầu từ một bước chân.”</p>
+                    <span class="quote-author">— Lão Tử</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-footer" id="footer">
+            <div><strong>CAMPUS</strong><span>Chia sẻ tri thức, kết nối cộng đồng.</span></div>
+            <div class="footer-links"><a href="#top">Giới thiệu</a><a href="#top">Điều khoản</a><a href="#top">Liên hệ</a></div>
+            <span class="copyright">© 2026 Campus. All rights reserved.</span>
+        </div>
+    </div>
+</body>
+</html>
