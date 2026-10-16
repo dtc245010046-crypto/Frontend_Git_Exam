@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+        .wufoo {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" action="simpleform.html" class="wufoo">
+        <h2>Order Form</h2>
+
+        <p><label for="product">What would you like to buy?</label></p>
+        <select id="product" name="product">
+            <option value="A">A</option>
+            <option value="B">B (+ 0.5$)</option>
+            <option value="C">C (+ 0.5$)</option>
+        </select>
+
+        <p>How many would you like to order?</p>
+        <label><input type="radio" name="quantity" value="1" checked> 1 - $10</label><br>
+        <label><input type="radio" name="quantity" value="2"> 2 - $20</label><br>
+        <label><input type="radio" name="quantity" value="3"> 3 - $25</label>
+
+        <p>Name <span style="color: red">*</span></p>
+        <input type="text" name="firstname" placeholder="FirstName" size="15" required aria-label="First name">
+        <input type="text" name="lastname" placeholder="LastName" size="15" aria-label="Last name">
+
+        <p><label for="email">Email</label></p>
+        <input type="email" id="email" name="email" size="35">
+
+        <p>Phone Number</p>
+        <input type="tel" name="phone1" size="5" aria-label="Phone number part one"> -
+        <input type="tel" name="phone2" size="5" aria-label="Phone number part two"> -
+        <input type="tel" name="phone3" size="5" aria-label="Phone number part three">
+
+        <p><input type="submit" name="btSubmit" value="Submit"></p>
+    </form>
+</body>
+</html>
