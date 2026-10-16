@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 720" role="img" aria-labelledby="title desc">
+  <title id="title">Nếp Sống Tinh Gọn</title>
+  <desc id="desc">Bìa sách minh họa màu xanh rêu với hình mặt trời và cành lá.</desc>
+  <defs>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#486653"/>
+      <stop offset="1" stop-color="#284936"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0d4a6"/>
+      <stop offset="1" stop-color="#d9a773"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="720" fill="#d8d0bd"/>
+  <rect x="14" y="14" width="492" height="692" fill="url(#cover)"/>
+  <circle cx="260" cy="309" r="119" fill="url(#sun)"/>
+  <path d="M105 506c95-21 201-21 310 0M131 538c80-16 173-16 258 0" fill="none" stroke="#d7dfd2" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M257 456c-3-74 7-137 31-191m-29 173c-32-29-62-50-94-63m97 34c27-37 55-64 86-84m-87 70c-7-49-23-87-48-119m47 110c30-14 57-21 87-22" fill="none" stroke="#e7e4d5" stroke-opacity=".78" stroke-width="3" stroke-linecap="round"/>
+  <path d="M160 372c-33-42-35-75-8-94 36 22 40 53 8 94Zm39-27c-8-49 4-78 36-83 21 37 9 66-36 83Zm71-52c20-43 47-57 75-41-1 42-25 61-75 41Zm20 81c43-28 76-27 94 1-24 35-55 36-94-1Zm-93 15c-44-17-60-45-47-76 42-4 63 20 47 76Z" fill="#a9b89d" fill-opacity=".88"/>
+  <text x="260" y="105" text-anchor="middle" fill="#e9e9db" font-family="Arial, sans-serif" font-size="15" letter-spacing="5">AN CHI</text>
+  <text x="260" y="594" text-anchor="middle" fill="#fffaf0" font-family="Georgia, serif" font-size="43" letter-spacing="1">NẾP SỐNG</text>
+  <text x="260" y="644" text-anchor="middle" fill="#fffaf0" font-family="Georgia, serif" font-size="43" letter-spacing="1">TINH GỌN</text>
+  <text x="260" y="677" text-anchor="middle" fill="#e9e9db" font-family="Arial, sans-serif" font-size="11" letter-spacing="3">MỘT NGÀY ĐỦ ĐẦY</text>
+</svg>
