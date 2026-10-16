@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ví dụ Bootstrap Navbar responsive có menu dropdown.">
+    <title>Bootstrap Navbar | Northstar Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home"><span class="brand-mark">N</span> Northstar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Mở hoặc đóng menu điều hướng">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#web-design">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#seo">SEO</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-sm btn-light rounded-pill px-3" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="container py-5 py-lg-6">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <p class="eyebrow">INDEPENDENT DIGITAL STUDIO</p>
+                        <h1>Make your next<br><span>big idea</span> happen.</h1>
+                        <p class="hero-copy">We build thoughtful digital experiences that help ambitious teams move forward.</p>
+                        <a href="#services" class="btn btn-primary rounded-pill px-4 py-2">Explore what we do <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="visual-card" aria-label="Minh họa hình học Northstar">
+                            <span class="shape shape-orbit"></span>
+                            <span class="shape shape-core">N</span>
+                            <span class="visual-caption">IDEAS INTO IMPACT · EST. 2020</span>
+                            <span class="spark spark-one">✳</span>
+                            <span class="spark spark-two">✦</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">WHAT WE DO</p>
+                <h2 id="services">Small team. Big-picture thinking.</h2>
+            </div>
+            <div class="row g-3 mt-2">
+                <article class="col-md-6" id="web-design">
+                    <div class="service-card h-100"><span class="service-icon">✳</span><p class="eyebrow">01 / DESIGN</p><h3>Web Design</h3><p>Clear, distinctive interfaces shaped around the people who use them.</p></div>
+                </article>
+                <article class="col-md-6" id="seo">
+                    <div class="service-card h-100"><span class="service-icon">↗</span><p class="eyebrow">02 / GROWTH</p><h3>SEO</h3><p>A practical foundation that helps the right people discover your work.</p></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2 py-4">
+            <span>© 2026 Northstar Studio</span>
+            <a href="mailto:hello@northstar.example">hello@northstar.example</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
