@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục hai cột bằng Float và Clear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Bố cục hai cột bằng Float và Clear</h1>
+        <div class="left-column">
+            <h2>Nội dung chính</h2>
+            <p>Cột bên trái chiếm 60% chiều rộng container và được căn bằng <code>float: left</code>.</p>
+            <p>Float đưa phần tử về một bên, để nội dung tiếp theo có thể chảy bên cạnh. Phần nền xanh giúp dễ quan sát kích thước cột.</p>
+        </div>
+        <div class="right-column">
+            <h2>Sidebar</h2>
+            <p>Cột bên phải chiếm 38% chiều rộng container và được căn bằng <code>float: right</code>.</p>
+            <ul>
+                <li>Thông tin liên quan</li>
+                <li>Liên kết hữu ích</li>
+                <li>Tin mới cập nhật</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        Footer nằm bên dưới hai cột nhờ <code>clear: both</code>.
+    </footer>
+</body>
+</html>
