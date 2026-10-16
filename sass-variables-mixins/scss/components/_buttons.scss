@@ -1,0 +1,6 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as vars;
+
+.button {
+  @include mixins.button-style(vars.$primary-color);
+}

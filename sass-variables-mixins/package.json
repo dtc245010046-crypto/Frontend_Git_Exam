@@ -1,0 +1,12 @@
+{
+  "name": "sass-variables-mixins",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Thực hành tối ưu CSS với Sass variables và mixins",
+  "scripts": {
+    "build": "sass scss/main.scss css/styles.css --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.105.2"
+  }
+}
