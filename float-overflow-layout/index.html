@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với Float và Overflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <span class="eyebrow">THỰC HÀNH CSS</span>
+        <h1>Bố cục trang với float và overflow</h1>
+        <p class="intro">Hai cột dùng float; phần ghi chú bên dưới có vùng cuộn riêng khi nội dung dài.</p>
+
+        <section class="container" aria-label="Bố cục hai cột">
+            <article class="column left-column">
+                <span class="column-label">01 · NỘI DUNG CHÍNH</span>
+                <h2>Cột bên trái</h2>
+                <p>Cột này được căn về bên trái bằng <code>float: left</code>. Mỗi phần có thể chứa nội dung, tin tức hoặc thông tin chính.</p>
+            </article>
+            <aside class="column right-column">
+                <span class="column-label">02 · THÔNG TIN BÊN LỀ</span>
+                <h2>Cột bên phải</h2>
+                <p>Sidebar được căn về bên phải bằng <code>float: right</code>, phù hợp cho liên kết hoặc nội dung bổ sung.</p>
+            </aside>
+        </section>
+
+        <section class="overflow-section" aria-labelledby="overflow-title">
+            <div class="section-heading">
+                <div><span class="eyebrow">VÙNG CUỘN RIÊNG</span><h2 id="overflow-title">Nội dung dài</h2></div>
+                <span class="scroll-hint">↕ Cuộn để xem tiếp</span>
+            </div>
+            <div class="overflow-box" tabindex="0" aria-label="Nội dung dài có thể cuộn">
+                <p>Đây là nội dung rất dài để kiểm tra cách <code>overflow</code> hoạt động. Khi phần văn bản vượt quá chiều cao của khung, thanh cuộn sẽ xuất hiện để bạn xem phần còn lại.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nunc in mauris pharetra, a ultricies justo fermentum. Curabitur sed sem sed arcu blandit suscipit. Integer faucibus neque at massa tincidunt, vitae tristique felis faucibus.</p>
+                <p>Donec at ipsum sed justo tristique consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed sollicitudin, lorem ut semper aliquam, velit justo imperdiet nisl, at feugiat augue libero sed mauris.</p>
+                <p>Curabitur euismod, neque at feugiat ultrices, justo justo luctus erat, sed vulputate lorem nibh sed augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>© 2026 · Bài thực hành Float, Clear và Overflow</footer>
+</body>
+</html>
