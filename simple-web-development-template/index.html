@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tìm hiểu nền tảng Web, C Programming và Java cùng CodeSpace.">
+    <title>CodeSpace | Lập trình bắt đầu từ đây</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Điều hướng chính">
+        <a class="brand" href="#top" aria-label="CodeSpace - về đầu trang"><img src="assets/logo.svg" alt=""><span>CodeSpace</span></a>
+        <ul class="nav-list">
+            <li><a href="#web">Web Technology</a></li>
+            <li><a href="#program">C Programming</a></li>
+            <li><a href="#course">Courses</a></li>
+        </ul>
+        <form class="rightnav" action="#course" method="get" role="search">
+            <label for="search" class="visually-hidden">Tìm khóa học</label>
+            <input type="search" name="search" id="search" placeholder="Tìm chủ đề...">
+            <button class="btn btn-sm" type="submit">Tìm kiếm</button>
+        </form>
+    </nav>
+
+    <main id="top">
+        <section class="welcome-section">
+            <div class="welcome-copy">
+                <span class="eyebrow">HỌC · THỰC HÀNH · PHÁT TRIỂN</span>
+                <h1>Lập trình bắt đầu từ <span>một ý tưởng.</span></h1>
+                <p>Khám phá những nền tảng quan trọng của phát triển phần mềm. Học từng bước, tạo sản phẩm của riêng bạn.</p>
+                <a class="welcome-button" href="#web">Khám phá chủ đề <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="welcome-art"><img src="assets/web-technology.svg" alt="Minh họa cửa sổ trình duyệt với các khối mã HTML và CSS"></div>
+        </section>
+
+        <section class="topic-section topic-web" id="web">
+            <div class="topic-inner">
+                <div class="topic-copy">
+                    <span class="eyebrow">01 / NỀN TẢNG WEB</span>
+                    <h2 class="text-big">Web Technology</h2>
+                    <p class="text-small">HTML tạo cấu trúc cho trang web, CSS định hình màu sắc và bố cục, còn JavaScript giúp trang phản hồi với người dùng. Kết hợp ba công nghệ này để biến ý tưởng thành trải nghiệm tương tác trên trình duyệt.</p>
+                    <a class="topic-link" href="#course">Bắt đầu với HTML <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="topic-art"><img src="assets/web-technology.svg" alt="Cửa sổ trình duyệt minh họa cấu trúc HTML và CSS"></div>
+            </div>
+        </section>
+
+        <section class="topic-section topic-c" id="program">
+            <div class="topic-inner section-left">
+                <div class="topic-copy">
+                    <span class="eyebrow">02 / TƯ DUY LẬP TRÌNH</span>
+                    <h2 class="text-big">C Programming</h2>
+                    <p class="text-small">C là ngôn ngữ lập trình thủ tục nổi tiếng với tốc độ và khả năng làm việc gần với phần cứng. Từ biến, vòng lặp đến con trỏ và quản lý bộ nhớ, C giúp bạn hiểu sâu cách chương trình vận hành.</p>
+                    <a class="topic-link" href="#course">Tìm hiểu ngôn ngữ C <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="topic-art"><img src="assets/c-programming.svg" alt="Minh họa cửa sổ soạn thảo mã C trên nền xanh"></div>
+            </div>
+        </section>
+
+        <section class="topic-section topic-java" id="course">
+            <div class="topic-inner">
+                <div class="topic-copy">
+                    <span class="eyebrow">03 / XÂY DỰNG ỨNG DỤNG</span>
+                    <h2 class="text-big">Java</h2>
+                    <p class="text-small">Java là ngôn ngữ hướng đối tượng được sử dụng trong nhiều ứng dụng doanh nghiệp và hệ thống lớn. Mã nguồn được biên dịch thành bytecode và chạy trên Java Virtual Machine, hỗ trợ triển khai trên nhiều nền tảng.</p>
+                    <a class="topic-link" href="#contact">Khám phá khóa học Java <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="topic-art"><img src="assets/java-development.svg" alt="Minh họa ứng dụng Java đang chạy trên nhiều thiết bị"></div>
+            </div>
+        </section>
+
+        <section class="course-strip" id="contact">
+            <div><span class="eyebrow">SẴN SÀNG BẮT ĐẦU?</span><h2>Chọn một chủ đề. Viết dòng code đầu tiên.</h2></div>
+            <a class="welcome-button" href="mailto:hello@codespace.example">Xem khóa học <span aria-hidden="true">→</span></a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 CodeSpace. Học lập trình bằng cách thực hành.</p>
+        <a href="#top">Về đầu trang ↑</a>
+    </footer>
+</body>
+</html>
