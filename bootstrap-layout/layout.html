@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bố cục cửa hàng trực tuyến được xây dựng bằng Bootstrap 3.">
+    <title>Online shopping mall | Bootstrap Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container shop-shell">
+        <header class="row shop-header" id="home">
+            <div class="col-xs-12">
+                <a class="shopping-mall" href="#home" aria-label="Online shopping mall - trang chủ">
+                    <span class="eyebrow">CodeGym marketplace</span>
+                    <h1>Online shopping mall</h1>
+                    <h5>The center point of professional programming</h5>
+                </a>
+                <img class="header-object hidden-xs" src="assets/header-object.svg" alt="Minh họa các thiết bị công nghệ">
+            </div>
+        </header>
+
+        <nav class="navbar navbar-inverse shop-navbar" aria-label="Điều hướng chính">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#shop-navigation" aria-expanded="false">
+                        <span class="sr-only">Mở điều hướng</span>
+                        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand visible-xs" href="#home">CG <span>Shop</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="shop-navigation">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Trang chủ</a></li>
+                        <li><a href="#about"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Giới thiệu</a></li>
+                        <li><a href="#contact"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Liên hệ</a></li>
+                        <li><a href="mailto:hello@codegym.example"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Góp ý</a></li>
+                        <li><a href="#help"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Hỏi đáp</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#account" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tài khoản <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#sign-in">Đăng nhập</a></li>
+                                <li><a href="#register">Đăng ký</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#orders">Đơn hàng của tôi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="row shop-content">
+            <aside class="col-sm-3 shop-sidebar" aria-label="Tìm kiếm và danh mục sản phẩm">
+                <section class="poly-cart panel panel-default">
+                    <div class="panel-heading"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> <strong>Giỏ hàng</strong></div>
+                    <div class="panel-body">
+                        <div class="row cart-summary">
+                            <div class="col-xs-5"><img class="img-responsive cart-image" src="assets/shopping-cart.svg" alt="Giỏ hàng"></div>
+                            <div class="col-xs-7">
+                                <ul>
+                                    <li><strong>3</strong> sản phẩm</li>
+                                    <li class="cart-total">$256.80</li>
+                                    <li><a href="#cart">Xem giỏ hàng <span aria-hidden="true">→</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel panel-default search-panel">
+                    <div class="panel-heading"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Tìm sản phẩm</div>
+                    <div class="panel-body">
+                        <form action="#products" method="get" role="search">
+                            <label class="sr-only" for="keyword">Từ khóa</label>
+                            <div class="input-group">
+                                <input class="form-control" id="keyword" name="q" placeholder="Nhập từ khóa...">
+                                <span class="input-group-btn"><button class="btn btn-primary" type="submit" aria-label="Tìm kiếm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></span>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="panel panel-default category-panel" id="help">
+                    <div class="panel-heading"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> <strong>Chủng loại</strong></div>
+                    <div class="list-group">
+                        <a href="#phones" class="list-group-item">Điện thoại di động <span class="badge">12</span></a>
+                        <a href="#laptops" class="list-group-item">Máy tính xách tay <span class="badge">8</span></a>
+                        <a href="#desktops" class="list-group-item">Máy tính để bàn <span class="badge">5</span></a>
+                        <a href="#appliances" class="list-group-item">Quạt máy <span class="badge">6</span></a>
+                        <a href="#televisions" class="list-group-item">Tivi <span class="badge">9</span></a>
+                        <a href="#refrigerators" class="list-group-item">Tủ lạnh <span class="badge">4</span></a>
+                    </div>
+                </section>
+
+                <div class="sidebar-note hidden-xs">
+                    <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                    <p>Miễn phí giao hàng<br><strong>cho đơn từ $100</strong></p>
+                </div>
+            </aside>
+
+            <article class="col-sm-9 product-area" id="products">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">Lựa chọn của tuần</span>
+                        <h2>Sản phẩm nổi bật</h2>
+                    </div>
+                    <div class="sort-control hidden-xs">
+                        <label for="sort-products">Sắp xếp</label>
+                        <select id="sort-products" class="form-control input-sm">
+                            <option>Mới nhất</option>
+                            <option>Giá thấp đến cao</option>
+                            <option>Giá cao đến thấp</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row product-grid">
+                    <div class="col-xs-6 col-md-4"><section class="panel panel-default poly-prod">
+                        <div class="panel-heading"><h3 class="panel-title">Điện thoại Nova X</h3></div>
+                        <div class="panel-body"><img src="assets/product-phone.svg" alt="Điện thoại Nova X" class="img-responsive center-block"><span class="product-tag">Mới</span></div>
+                        <div class="panel-footer"><strong>$100.25</strong><a href="#product-nova" class="btn btn-xs btn-primary">Chi tiết</a></div>
+                    </section></div>
+                    <div class="col-xs-6 col-md-4"><section class="panel panel-default poly-prod">
+                        <div class="panel-heading"><h3 class="panel-title">Laptop Air 14</h3></div>
+                        <div class="panel-body"><img src="assets/product-laptop.svg" alt="Laptop Air 14" class="img-responsive center-block"></div>
+                        <div class="panel-footer"><strong>$829.00</strong><a href="#product-air" class="btn btn-xs btn-primary">Chi tiết</a></div>
+                    </section></div>
+                    <div class="col-xs-6 col-md-4"><section class="panel panel-default poly-prod">
+                        <div class="panel-heading"><h3 class="panel-title">Màn hình Studio</h3></div>
+                        <div class="panel-body"><img src="assets/product-monitor.svg" alt="Màn hình Studio" class="img-responsive center-block"></div>
+                        <div class="panel-footer"><strong>$249.50</strong><a href="#product-studio" class="btn btn-xs btn-primary">Chi tiết</a></div>
+                    </section></div>
+                    <div class="col-xs-6 col-md-4"><section class="panel panel-default poly-prod">
+                        <div class="panel-heading"><h3 class="panel-title">Quạt Breeze</h3></div>
+                        <div class="panel-body"><img src="assets/product-fan.svg" alt="Quạt Breeze" class="img-responsive center-block"></div>
+                        <div class="panel-footer"><strong>$56.80</strong><a href="#product-breeze" class="btn btn-xs btn-primary">Chi tiết</a></div>
+                    </section></div>
+                    <div class="col-xs-6 col-md-4"><section class="panel panel-default poly-prod">
+                        <div class="panel-heading"><h3 class="panel-title">Tivi Vision 4K</h3></div>
+                        <div class="panel-body"><img src="assets/product-tv.svg" alt="Tivi Vision 4K" class="img-responsive center-block"><span class="product-tag product-tag-sale">-15%</span></div>
+                        <div class="panel-footer"><strong>$568.00</strong><a href="#product-vision" class="btn btn-xs btn-primary">Chi tiết</a></div>
+                    </section></div>
+                    <div class="col-xs-6 col-md-4"><section class="panel panel-default poly-prod">
+                        <div class="panel-heading"><h3 class="panel-title">Tủ lạnh Fresh 260</h3></div>
+                        <div class="panel-body"><img src="assets/product-fridge.svg" alt="Tủ lạnh Fresh 260" class="img-responsive center-block"></div>
+                        <div class="panel-footer"><strong>$699.90</strong><a href="#product-fresh" class="btn btn-xs btn-primary">Chi tiết</a></div>
+                    </section></div>
+                </div>
+
+                <nav class="text-center" aria-label="Chuyển trang sản phẩm">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#previous" aria-label="Trang trước">&laquo;</a></li>
+                        <li class="active"><a href="#page-1" aria-current="page">1</a></li>
+                        <li><a href="#page-2">2</a></li>
+                        <li><a href="#page-3">3</a></li>
+                        <li><a href="#next" aria-label="Trang sau">&raquo;</a></li>
+                    </ul>
+                </nav>
+            </article>
+        </main>
+
+        <footer class="panel panel-default shop-footer" id="contact">
+            <div class="panel-heading text-center">
+                <p>CodeGym Marketplace <span aria-hidden="true">•</span> Mua sắm công nghệ dễ dàng</p>
+                <small>© 2026 CodeGym. Giao diện thực hành Bootstrap 3.</small>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
