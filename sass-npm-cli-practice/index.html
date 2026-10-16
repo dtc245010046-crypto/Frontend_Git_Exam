@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ví dụ thực hành dùng Sass CLI biên dịch SCSS thành CSS.">
+  <title>Học Web cùng Nova — Sass CLI</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#home">Nova Academy</a>
+      <nav aria-label="Điều hướng chính">
+        <ul class="nav-links">
+          <li><a href="#home">Trang chủ</a></li>
+          <li><a href="#courses">Khóa học</a></li>
+          <li><a href="#benefits">Lợi ích</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <h1>Viết SCSS gọn gàng, tạo CSS dễ quản lý</h1>
+      <p>Ví dụ này được biên dịch từ nhiều tệp SCSS bằng Sass CLI. Hãy sửa một biến trong <code>scss/_tokens.scss</code> rồi chạy chế độ watch để quan sát CSS cập nhật.</p>
+      <a class="button" href="#courses">Xem nội dung thực hành</a>
+    </section>
+
+    <section class="features" id="courses" aria-label="Các nội dung thực hành">
+      <article class="feature-card">
+        <h2>Biến và partial</h2>
+        <p>Màu sắc, kích thước và quy tắc giao diện được tách thành các tệp SCSS dễ tái sử dụng.</p>
+      </article>
+      <article class="feature-card" id="benefits">
+        <h2>Sass CLI</h2>
+        <p>Lệnh build biên dịch toàn bộ thư mục <code>scss/</code> sang thư mục <code>css/</code>.</p>
+      </article>
+      <article class="feature-card">
+        <h2>Watch mode</h2>
+        <p>Tiến trình theo dõi tự biên dịch lại CSS khi phát hiện tệp SCSS thay đổi.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 Nova Academy · Bài thực hành Sass CLI</p></div>
+  </footer>
+</body>
+</html>

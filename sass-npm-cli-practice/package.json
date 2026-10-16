@@ -1,0 +1,14 @@
+{
+  "name": "sass-npm-cli-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bài thực hành biên dịch SCSS với npm và Sass CLI",
+  "scripts": {
+    "build": "sass scss:css --no-source-map",
+    "build:single": "sass scss/styles.scss css/styles.css --no-source-map",
+    "watch": "sass scss:css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}
