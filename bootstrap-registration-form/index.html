@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form đăng ký responsive được xây dựng bằng Bootstrap Forms.">
+    <title>Đăng ký thành viên | Form Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <a class="brand" href="#top"><span class="brand-mark">N</span> Northstar</a>
+            <span class="topbar-note">Cộng đồng học tập & sáng tạo</span>
+        </div>
+    </header>
+
+    <main class="container py-4 py-lg-5" id="top">
+        <div class="row justify-content-center align-items-stretch g-4">
+            <aside class="col-lg-4 d-none d-lg-flex">
+                <div class="intro-panel w-100">
+                    <span class="intro-symbol">✳</span>
+                    <p class="eyebrow">BẮT ĐẦU HÀNH TRÌNH</p>
+                    <h1>Tạo tài khoản.<br><span>Mở lối khám phá.</span></h1>
+                    <p>Đăng ký để kết nối, lưu lại những nội dung yêu thích và cập nhật các chủ đề mới.</p>
+                    <div class="intro-bottom"><span class="intro-line"></span><span>Đơn giản · An toàn · Miễn phí</span></div>
+                </div>
+            </aside>
+
+            <section class="col-12 col-lg-7 col-xl-6">
+                <div class="form-card">
+                    <div class="form-heading">
+                        <p class="eyebrow">THÀNH VIÊN MỚI</p>
+                        <h2>Đăng ký tài khoản</h2>
+                        <p class="text-muted mb-0">Điền thông tin bên dưới để tạo tài khoản của bạn.</p>
+                    </div>
+
+                    <form id="registration-form" novalidate>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="fullName" class="form-label">Họ và tên <span class="required-mark">*</span></label>
+                                <input type="text" class="form-control" id="fullName" name="full_name" placeholder="Nguyễn Minh Anh" autocomplete="name" required>
+                                <div class="invalid-feedback">Vui lòng nhập họ và tên.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email <span class="required-mark">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="ban@example.com" autocomplete="email" required>
+                                <div class="form-text">Dùng email bạn có thể truy cập.</div>
+                                <div class="invalid-feedback">Vui lòng nhập địa chỉ email hợp lệ.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="password" class="form-label">Mật khẩu <span class="required-mark">*</span></label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Tối thiểu 8 ký tự" autocomplete="new-password" minlength="8" required>
+                                <div class="invalid-feedback">Mật khẩu cần có ít nhất 8 ký tự.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="confirmPassword" class="form-label">Xác nhận mật khẩu <span class="required-mark">*</span></label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirm_password" placeholder="Nhập lại mật khẩu" autocomplete="new-password" required>
+                                <div class="invalid-feedback">Mật khẩu xác nhận chưa khớp.</div>
+                            </div>
+
+                            <fieldset class="col-12">
+                                <legend class="form-label mb-2">Giới tính</legend>
+                                <div class="choice-row">
+                                    <div class="form-check"><input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female"><label class="form-check-label" for="genderFemale">Nữ</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" name="gender" id="genderMale" value="male"><label class="form-check-label" for="genderMale">Nam</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" name="gender" id="genderOther" value="other"><label class="form-check-label" for="genderOther">Khác</label></div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="col-12">
+                                <legend class="form-label mb-2">Sở thích</legend>
+                                <div class="choice-row hobby-row">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" name="interests[]" id="interestTech" value="technology"><label class="form-check-label" for="interestTech">Công nghệ</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" name="interests[]" id="interestDesign" value="design"><label class="form-check-label" for="interestDesign">Thiết kế</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" name="interests[]" id="interestTravel" value="travel"><label class="form-check-label" for="interestTravel">Du lịch</label></div>
+                                </div>
+                            </fieldset>
+
+                            <div class="col-12">
+                                <label for="country" class="form-label">Quốc gia</label>
+                                <select class="form-select" id="country" name="country">
+                                    <option value="" selected>Chọn quốc gia của bạn</option>
+                                    <option value="vn">Việt Nam</option>
+                                    <option value="sg">Singapore</option>
+                                    <option value="jp">Nhật Bản</option>
+                                    <option value="kr">Hàn Quốc</option>
+                                    <option value="other">Quốc gia khác</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 pt-1">
+                                <button type="submit" class="btn btn-primary w-100 py-2">Tạo tài khoản <span aria-hidden="true">→</span></button>
+                                <p class="privacy-note text-muted text-center mb-0">Bằng việc đăng ký, bạn đồng ý với điều khoản sử dụng.</p>
+                                <div class="alert alert-success mt-3 mb-0 d-none" id="form-status" role="status">Thông tin hợp lệ. Đây là bản demo giao diện, dữ liệu chưa được gửi tới máy chủ.</div>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="signin-note text-center mb-0">Đã có tài khoản? <a href="#top">Đăng nhập</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2 py-3">
+            <span>© 2026 Northstar</span><span>Đăng ký thành viên</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
