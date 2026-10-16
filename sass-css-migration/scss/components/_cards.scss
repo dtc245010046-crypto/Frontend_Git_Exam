@@ -1,0 +1,8 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as vars;
+
+.card {
+  border: 1px solid vars.$border-color;
+  padding: 20px;
+  @include mixins.box-shadow;
+}

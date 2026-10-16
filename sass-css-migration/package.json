@@ -1,0 +1,12 @@
+{
+  "name": "sass-css-migration",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chuyển CSS truyền thống thành SCSS có cấu trúc",
+  "scripts": {
+    "build": "sass scss/main.scss css/styles.css --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.105.2"
+  }
+}

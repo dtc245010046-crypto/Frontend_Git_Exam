@@ -1,0 +1,11 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as vars;
+
+.button {
+  @include mixins.button-style(vars.$primary-color);
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(0.9);
+  }
+}
