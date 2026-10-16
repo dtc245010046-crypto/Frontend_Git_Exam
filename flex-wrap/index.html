@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minh họa các giá trị của thuộc tính CSS flex-wrap bằng Flexbox.">
+    <title>Thực hành CSS | flex-wrap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <p class="eyebrow">CSS FLEXBOX · THỰC HÀNH</p>
+        <h1>Cho Flex Items xuống dòng với <code>flex-wrap</code></h1>
+        <p>So sánh cách các item được sắp xếp khi container không đủ chỗ trên một hàng.</p>
+    </header>
+
+    <main class="examples">
+        <section class="demo-card" aria-labelledby="nowrap-title">
+            <div class="demo-heading">
+                <span class="number">01</span>
+                <div><h2 id="nowrap-title">Không xuống dòng</h2><code>flex-wrap: nowrap;</code></div>
+            </div>
+            <p>Giữ các item trên cùng một hàng. Kéo thanh cuộn ngang để xem những item nằm ngoài khung.</p>
+            <div class="track-window">
+                <div class="track track-nowrap" aria-label="Sáu item trên một hàng không xuống dòng">
+                    <div class="item">Item 1</div><div class="item">Item 2</div><div class="item">Item 3</div>
+                    <div class="item">Item 4</div><div class="item">Item 5</div><div class="item">Item 6</div>
+                </div>
+            </div>
+            <p class="note">Mặc định Flexbox có thể co item. Ví dụ đặt <code>flex-shrink: 0</code> để thấy rõ phần tràn.</p>
+        </section>
+
+        <section class="demo-card" aria-labelledby="wrap-title">
+            <div class="demo-heading">
+                <span class="number">02</span>
+                <div><h2 id="wrap-title">Bọc xuống hàng mới</h2><code>flex-wrap: wrap;</code></div>
+            </div>
+            <p>Khi hết chỗ theo chiều ngang, các item tiếp theo tự chuyển sang hàng dưới.</p>
+            <div class="track track-wrap" aria-label="Sáu item được bọc thành nhiều hàng">
+                <div class="item">Item 1</div><div class="item">Item 2</div><div class="item">Item 3</div>
+                <div class="item">Item 4</div><div class="item">Item 5</div><div class="item">Item 6</div>
+            </div>
+        </section>
+
+        <section class="demo-card" aria-labelledby="reverse-title">
+            <div class="demo-heading">
+                <span class="number">03</span>
+                <div><h2 id="reverse-title">Bọc theo hướng ngược</h2><code>flex-wrap: wrap-reverse;</code></div>
+            </div>
+            <p>Các hàng được xếp theo hướng ngược trên trục phụ; thứ tự item trong mỗi hàng vẫn giữ nguyên.</p>
+            <div class="track track-reverse" aria-label="Các hàng item được xếp từ dưới lên trên">
+                <div class="item">Item 1</div><div class="item">Item 2</div><div class="item">Item 3</div>
+                <div class="item">Item 4</div><div class="item">Item 5</div><div class="item">Item 6</div>
+            </div>
+            <p class="note">Hàng đầu tiên nằm phía dưới; các hàng tiếp theo được tạo ngược lên trên.</p>
+        </section>
+
+        <section class="demo-card" aria-labelledby="initial-title">
+            <div class="demo-heading">
+                <span class="number">04</span>
+                <div><h2 id="initial-title">Trở về giá trị ban đầu</h2><code>flex-wrap: initial;</code></div>
+            </div>
+            <p>Ở đây quy tắc chung đặt <code>wrap</code>, còn <code>initial</code> đặt thuộc tính về mặc định <code>nowrap</code>.</p>
+            <div class="track track-initial" aria-label="Giá trị initial đưa flex-wrap về nowrap">
+                <div class="item">Item 1</div><div class="item">Item 2</div><div class="item">Item 3</div>
+                <div class="item">Item 4</div><div class="item">Item 5</div><div class="item">Item 6</div>
+            </div>
+            <p class="note">Tương đương với <code>flex-wrap: nowrap;</code>.</p>
+        </section>
+    </main>
+
+    <footer><code>flex-wrap</code> xác định Flex Items nằm trên một hàng hay được bọc thành nhiều hàng.</footer>
+</body>
+</html>
