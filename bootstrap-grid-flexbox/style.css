@@ -1,0 +1,74 @@
+:root { --brand: #5067e8; --brand-dark: #394fc6; --ink: #19233d; --muted: #6e7890; --line: #e6eaf3; --pale: #f5f7ff; }
+html { scroll-behavior: smooth; scroll-padding-top: 78px; }
+body { color: var(--ink); font-family: Inter, "Segoe UI", Arial, sans-serif; }
+.navbar { min-height: 68px; box-shadow: 0 4px 18px rgba(18, 27, 56, .12); }
+.navbar-brand { letter-spacing: -.035em; }
+.navbar-brand i { color: #91a4ff; }
+.nav-link { margin-left: .6rem; }
+.nav-link:hover { color: #aebcff !important; }
+.intro { overflow: hidden; background: radial-gradient(circle at 83% 25%, #edf0ff 0, #f7f8ff 26rem, #fff 58rem); }
+.eyebrow { color: var(--brand); font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.intro h1 { color: var(--ink); font-size: clamp(2.7rem, 5.5vw, 4.6rem); letter-spacing: -.065em; line-height: 1.05; }
+.intro h1 span { color: var(--brand); }
+.intro .lead { max-width: 630px; font-size: 1.12rem; line-height: 1.7; }
+.intro .btn-primary, .contact-card .btn-primary { border-color: var(--brand); background: var(--brand); }
+.intro .btn-primary:hover, .contact-card .btn-primary:hover { border-color: var(--brand-dark); background: var(--brand-dark); }
+.hero-art { position: relative; display: flex; min-height: 320px; align-items: center; justify-content: center; }
+.hero-window { position: relative; z-index: 1; width: min(100%, 395px); padding: 12px; border: 1px solid #e0e5f4; border-radius: 17px; background: white; box-shadow: 0 24px 70px rgba(44, 61, 133, .18); transform: rotate(-4deg); }
+.window-top { display: flex; gap: 5px; padding: 2px 0 11px 3px; }
+.window-top i { width: 7px; height: 7px; border-radius: 50%; background: #f27d80; }
+.window-top i:nth-child(2) { background: #f0bf5e; }.window-top i:nth-child(3) { background: #66bd92; }
+.window-content { display: flex; height: 186px; gap: 13px; padding: 14px; border-radius: 9px; background: #f4f6fd; }
+.window-sidebar { width: 29%; border-radius: 7px; background: linear-gradient(165deg, #627ced, #9faaff); }
+.window-lines { display: flex; flex: 1; flex-direction: column; gap: 10px; padding-top: 3px; }
+.window-lines b { width: 75%; height: 10px; border-radius: 8px; background: #c5cde2; }.window-lines b:first-child { width: 48%; height: 15px; background: #5b6fe2; }
+.window-lines span { height: 45px; margin-top: 5px; border-radius: 8px; background: linear-gradient(115deg, #d8e1ff, #c3d5f8); }.window-lines span:last-child { height: 25px; margin-top: 0; background: #e2e6f2; }
+.hero-orbit { position: absolute; border: 1px solid #dce2ff; border-radius: 50%; }.orbit-one { width: 330px; height: 330px; }.orbit-two { width: 260px; height: 260px; border-style: dashed; }
+.float-badge { position: absolute; z-index: 2; top: 42px; right: 31px; display: grid; width: 59px; height: 59px; place-items: center; border-radius: 18px; background: #ffda8e; color: #594293; font-size: 1.3rem; box-shadow: 0 12px 25px rgba(85, 69, 134, .18); transform: rotate(9deg); }
+.section-title h2, .service-heading h2 { color: var(--ink); letter-spacing: -.045em; }
+.section-title p { max-width: 600px; margin: 0 auto; }
+.feature-tile { position: relative; min-height: 265px; overflow: hidden; border: 1px solid var(--line); border-radius: 19px; }
+.feature-tile p { max-width: 270px; color: var(--muted); font-size: .94rem; line-height: 1.65; }
+.tile-light { background: linear-gradient(145deg, #fff, #f5f7ff); }
+.tile-dark { border-color: #283762; background: #26345f; color: white; }
+.tile-dark p { color: #d1d7ea; }
+.tile-number { position: absolute; top: 16px; left: 18px; color: #b7c2e5; font-size: .7rem; font-weight: 800; letter-spacing: .1em; }
+.tile-dark .tile-number { color: #9daeea; }
+.tile-icon { color: var(--brand); font-size: 1.55rem; }
+.tile-dark .tile-icon { color: #a9b8ff; }
+.spacing-demo { background: var(--pale); }
+.spacing-demo h2 { color: var(--ink); }
+.spacing-demo code { padding: 2px 5px; border-radius: 4px; background: #e8ecff; color: #4358c9; }
+.mobile-hint { background: #fff4d5; color: #6e5418; }
+.gallery-section { background: #f7f8fc; }
+.gallery-section h2 { color: var(--ink); letter-spacing: -.045em; }
+.gallery-count { color: var(--ink); font-weight: 700; }.gallery-count span { color: #a5aec0; font-weight: 400; }
+#myCarousel { box-shadow: 0 18px 45px rgba(23, 36, 78, .14); }
+#myCarousel .carousel-item img { height: clamp(300px, 48vw, 540px); object-fit: cover; }
+#myCarousel .carousel-item::after { position: absolute; inset: 0; content: ""; background: linear-gradient(0deg, rgba(15, 26, 58, .7), transparent 57%); }
+#myCarousel .carousel-caption { z-index: 1; right: 10%; bottom: 11%; left: 10%; text-align: left; }
+#myCarousel .carousel-caption span { color: #ced7ff; font-size: .74rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+#myCarousel .carousel-caption h3 { margin-top: .5rem; font-size: clamp(1.55rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -.035em; }
+#myCarousel .carousel-indicators [data-bs-target] { width: 9px; height: 9px; border: 0; border-radius: 50%; }
+.contact-card { border: 1px solid var(--line); background: white; box-shadow: 0 16px 45px rgba(30, 46, 94, .07); }
+.contact-card h2 { color: var(--ink); letter-spacing: -.04em; }
+.contact-card .form-label { color: #35415c; font-weight: 600; }
+.contact-card .form-control { border-color: #dfe4ef; border-radius: 11px; box-shadow: none; }
+.contact-card .form-control:focus { border-color: #8594ef; box-shadow: 0 0 0 .2rem rgba(80, 103, 232, .13); }
+.site-footer { background: #17213d; color: #aab4d0; }
+.footer-brand { color: white; font-size: 1.1rem; font-weight: 700; text-decoration: none; }.footer-brand i { color: #95a8ff; }
+.back-top { color: #c9d2f0; font-size: .85rem; text-decoration: none; }.back-top:hover { color: white; }
+@media (max-width: 767.98px) {
+  .intro { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .intro h1 { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+  .feature-tile { min-height: 230px; }
+  .gallery-section h2 { font-size: 1.75rem; }
+  #myCarousel .carousel-item img { height: 360px; }
+  #myCarousel .carousel-caption { right: 8%; bottom: 9%; left: 8%; }
+  #myCarousel .carousel-caption h3 { max-width: 90%; font-size: 1.55rem; }
+}
+@media (max-width: 420px) {
+  #myCarousel .carousel-item img { height: 310px; }
+  #myCarousel .carousel-caption h3 { font-size: 1.3rem; }
+  #myCarousel .carousel-control-prev, #myCarousel .carousel-control-next { width: 12%; }
+}
