@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700" role="img" aria-labelledby="title desc">
+  <title id="title">Một góc xanh trong nhà</title>
+  <desc id="desc">Chậu cây lá lớn trên chiếc bàn cạnh cửa sổ, với tông màu dịu nhẹ.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9eddf"/><stop offset="1" stop-color="#d9e4d2"/></linearGradient>
+    <linearGradient id="pot" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c7835d"/><stop offset="1" stop-color="#9e6045"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#86a978"/><stop offset="1" stop-color="#42694e"/></linearGradient>
+    <linearGradient id="leaf2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a5bd84"/><stop offset="1" stop-color="#598062"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#465847" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="960" height="700" fill="url(#wall)"/>
+  <circle cx="784" cy="108" r="56" fill="#f5edce" opacity=".75"/>
+  <rect x="596" y="0" width="364" height="488" fill="#dbe8dd" opacity=".75"/>
+  <path d="M770 0v486M596 238h364" stroke="#fff" stroke-width="16" opacity=".9"/>
+  <path d="M0 526h960v174H0z" fill="#d6b797"/>
+  <path d="M0 526h960" stroke="#c39d79" stroke-width="12"/>
+  <ellipse cx="467" cy="575" rx="221" ry="35" fill="#76816c" opacity=".16"/>
+  <g filter="url(#shadow)">
+    <path d="M379 454c-96-38-115-123-70-208 53 44 91 110 84 190 14-114 74-191 165-218 13 98-47 196-150 237" fill="url(#leaf)"/>
+    <path d="M468 436c-17-119 24-226 112-280 43 91 13 203-87 292 87-81 184-102 268-69-43 91-151 143-278 91" fill="url(#leaf2)"/>
+    <path d="M438 460c-87-101-82-217-8-291 62 72 77 177 20 283 47-105 127-164 222-157-17 104-105 185-236 194" fill="url(#leaf)"/>
+    <path d="M483 452c50-119 145-182 246-170-19 106-103 186-233 203 112-33 209-8 270 64-80 69-202 70-305-15" fill="url(#leaf2)"/>
+    <path d="M463 472c-52-108-36-215 35-285 55 85 52 193-19 287" fill="#73956b"/>
+    <path d="M478 457c-15-119 8-217 53-287" fill="none" stroke="#d6e0bf" stroke-width="6" opacity=".7"/>
+    <path d="M492 453c35-91 89-161 154-203M456 445c-14-87-4-156 22-210M473 459c-59-74-91-143-94-211M503 455c74-47 142-66 202-57" fill="none" stroke="#d6e0bf" stroke-width="5" opacity=".65"/>
+    <path d="M370 448h219l-27 152c-4 23-20 38-44 38h-77c-24 0-40-15-44-38z" fill="url(#pot)"/>
+    <ellipse cx="480" cy="450" rx="110" ry="26" fill="#aa6b4d"/>
+    <ellipse cx="480" cy="448" rx="91" ry="16" fill="#614c38"/>
+  </g>
+  <g fill="#f6f2e7" opacity=".8"><circle cx="113" cy="118" r="4"/><circle cx="161" cy="171" r="3"/><circle cx="841" cy="416" r="5"/><circle cx="703" cy="93" r="3"/></g>
+  <path d="M88 624c81-27 145-24 201 7M672 636c69-21 123-17 180 8" fill="none" stroke="#ae8d6d" stroke-width="4" opacity=".45"/>
+</svg>
