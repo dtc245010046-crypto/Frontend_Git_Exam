@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My New Project - Welcome Page</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+      color: #c9d1d9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .card {
+      background: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 540px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    h1 {
+      color: #58a6ff;
+      margin-bottom: 12px;
+    }
+    p {
+      line-height: 1.6;
+      color: #8b949e;
+    }
+    .badge {
+      display: inline-block;
+      background: #238636;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    code {
+      background: #161b22;
+      color: #79c0ff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Git & GitHub Initialized</div>
+    <h1>My New Project</h1>
+    <p>
+      Dự án đã được khởi tạo thành công trên Git và đồng bộ lên Remote Repository GitHub!
+    </p>
+    <p>
+      Chu trình thực hiện: <code>git init</code> &rarr; <code>git add .</code> &rarr; <code>git commit -m "..."</code> &rarr; <code>git push origin &lt;branch&gt;</code>.
+    </p>
+  </div>
+</body>
+</html>
