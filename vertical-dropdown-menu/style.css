@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 36px 24px;
+    background-color: #f3f6f9;
+    color: #263449;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: min(100%, 720px);
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 8px;
+    color: #183c5a;
+}
+
+p {
+    margin: 0 0 22px;
+    color: #576a7a;
+}
+
+#menu {
+    position: relative;
+    z-index: 1;
+    width: 140px;
+}
+
+#menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    padding: 0 20px;
+    border-bottom: 1px solid #444;
+    background-color: #171c24;
+    line-height: 30px;
+    list-style: none;
+    cursor: pointer;
+}
+
+#menu li:hover,
+#menu li:focus-within {
+    background-color: #167a83;
+}
+
+#menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#menu a:focus-visible {
+    outline: 2px solid #f4d35e;
+    outline-offset: 2px;
+}
+
+#menu a.has-submenu::after {
+    float: right;
+    content: "›";
+    font-size: 20px;
+}
+
+#menu li.has-submenu::after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 20px;
+    height: 30px;
+    content: "";
+}
+
+#menu ul ul {
+    position: absolute;
+    top: 0;
+    left: 160px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 140ms ease;
+}
+
+#menu li:hover > ul,
+#menu li:focus-within > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #menu ul ul {
+        transition: none;
+    }
+}

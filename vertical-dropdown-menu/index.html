@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu dọc Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Menu dọc Dropdown</h1>
+        <p>Di chuột hoặc dùng phím Tab để mở các mục con.</p>
+
+        <nav id="menu" aria-label="Menu chính">
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li class="has-submenu">
+                    <a href="#courses" class="has-submenu">Khóa học</a>
+                    <ul>
+                        <li><a href="#html">HTML</a></li>
+                        <li><a href="#css">CSS</a></li>
+                        <li><a href="#javascript">JavaScript</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#resources" class="has-submenu">Tài nguyên</a>
+                    <ul>
+                        <li><a href="#guides">Hướng dẫn</a></li>
+                        <li><a href="#tools">Công cụ</a></li>
+                        <li><a href="#community">Cộng đồng</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">Giới thiệu</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>
