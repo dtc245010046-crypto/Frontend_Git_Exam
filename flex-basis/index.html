@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Các ví dụ thực hành CSS Flexbox với thuộc tính flex-basis.">
+    <title>Thực hành CSS | flex-basis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <p class="eyebrow">CSS FLEXBOX · THỰC HÀNH</p>
+        <h1>Kích thước cơ sở với <code>flex-basis</code></h1>
+        <p>Flex basis xác định kích thước ban đầu của Flex Item trên trục chính trước khi Flexbox phân phối không gian.</p>
+    </header>
+
+    <main class="examples">
+        <section class="demo-card" aria-labelledby="px-title">
+            <div class="demo-heading"><span class="number">01</span><div><h2>Kích thước theo px</h2><code>flex-basis: 200px / 100px / 150px</code></div></div>
+            <p>Container nằm ngang nên flex-basis đặt chiều rộng cơ sở. Các item không co để giữ nguyên kích thước mẫu.</p>
+            <div class="track scroll-track px-track" aria-label="Ba item có flex-basis lần lượt 200, 100 và 150 pixel">
+                <div class="basis-item px-one">Item 1 <small>200px</small></div>
+                <div class="basis-item px-two">Item 2 <small>100px</small></div>
+                <div class="basis-item px-three">Item 3 <small>150px</small></div>
+            </div>
+        </section>
+
+        <section class="demo-card" aria-labelledby="column-title">
+            <div class="demo-heading"><span class="number">02</span><div><h2>Thay đổi theo trục chính</h2><code>flex-direction: column;</code></div></div>
+            <p>Với hướng column, trục chính là chiều dọc nên <code>flex-basis: 100px</code> đặt chiều cao cơ sở.</p>
+            <div class="track column-track" aria-label="Ba item theo chiều dọc, mỗi item có flex-basis 100 pixel">
+                <div class="basis-item column-item">Item 1 <small>100px cao</small></div>
+                <div class="basis-item column-item">Item 2 <small>100px cao</small></div>
+                <div class="basis-item column-item">Item 3 <small>100px cao</small></div>
+            </div>
+        </section>
+
+        <section class="demo-card" aria-labelledby="percent-title">
+            <div class="demo-heading"><span class="number">03</span><div><h2>Kích thước theo phần trăm</h2><code>flex-basis: 50%;</code></div></div>
+            <p>Mỗi item có cơ sở bằng một nửa chiều rộng của container; hai item tạo thành hai cột.</p>
+            <div class="track percent-track" aria-label="Hai item mỗi item chiếm 50 phần trăm chiều rộng container">
+                <div class="basis-item percent-item">Item 1 <small>50%</small></div>
+                <div class="basis-item percent-item">Item 2 <small>50%</small></div>
+            </div>
+        </section>
+
+        <section class="demo-card" aria-labelledby="grow-title">
+            <div class="demo-heading"><span class="number">04</span><div><h2>Kết hợp với flex-grow</h2><code>flex-grow: 1 : 2 : 1</code></div></div>
+            <p>Cả ba item bắt đầu từ 100px. Phần trống còn lại được chia theo tỷ lệ grow, vì vậy Item 2 rộng hơn.</p>
+            <div class="track grow-track" aria-label="Ba item với flex-grow theo tỷ lệ một, hai, một">
+                <div class="basis-item grow-item grow-one">Item 1 <small>basis 100px · grow 1</small></div>
+                <div class="basis-item grow-item grow-two">Item 2 <small>basis 100px · grow 2</small></div>
+                <div class="basis-item grow-item grow-three">Item 3 <small>basis 100px · grow 1</small></div>
+            </div>
+        </section>
+
+        <section class="demo-card" aria-labelledby="auto-title">
+            <div class="demo-heading"><span class="number">05</span><div><h2>Giá trị auto</h2><code>flex-basis: auto;</code></div></div>
+            <p>Với trục ngang, <code>auto</code> lấy kích thước từ thuộc tính <code>width</code> đã đặt cho item.</p>
+            <div class="track global-track auto-track" aria-label="Item dùng flex-basis auto và width 160 pixel">
+                <div class="basis-item auto-item">Item 1 <small>width 160px</small></div>
+                <div class="basis-item auto-item">Item 2 <small>width 160px</small></div>
+            </div>
+        </section>
+
+        <section class="demo-card" aria-labelledby="initial-title">
+            <div class="demo-heading"><span class="number">06</span><div><h2>Giá trị initial</h2><code>flex-basis: initial;</code></div></div>
+            <p><code>initial</code> đặt thuộc tính về giá trị ban đầu <code>auto</code>, nên item cũng dùng width 160px.</p>
+            <div class="track global-track initial-track" aria-label="Item dùng flex-basis initial và width 160 pixel">
+                <div class="basis-item initial-item">Item 1 <small>initial → auto</small></div>
+                <div class="basis-item initial-item">Item 2 <small>initial → auto</small></div>
+            </div>
+        </section>
+
+        <section class="demo-card inherit-card" aria-labelledby="inherit-title">
+            <div class="demo-heading"><span class="number">07</span><div><h2>Giá trị inherit</h2><code>flex-basis: inherit;</code></div></div>
+            <p>Item kế thừa giá trị 160px được khai báo trên container cha. Trong thực tế, thuộc tính thường đặt trực tiếp trên Flex Item.</p>
+            <div class="track inherit-track" aria-label="Các item kế thừa flex-basis 160 pixel từ phần tử cha">
+                <div class="basis-item inherited-item">Item 1 <small>inherit 160px</small></div>
+                <div class="basis-item inherited-item">Item 2 <small>inherit 160px</small></div>
+            </div>
+        </section>
+    </main>
+
+    <footer><code>flex-basis</code> theo trục chính: row → chiều ngang <span>·</span> column → chiều dọc</footer>
+</body>
+</html>
