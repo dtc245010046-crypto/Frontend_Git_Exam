@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thực hành phân phối không gian Flexbox với thuộc tính flex-grow.">
+    <title>Thực hành CSS | flex-grow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <p class="eyebrow">CSS FLEXBOX · THỰC HÀNH</p>
+        <h1>Phân phối không gian với <code>flex-grow</code></h1>
+        <p>Thuộc tính này quyết định Flex Item nhận thêm bao nhiêu phần không gian trống trong container.</p>
+    </header>
+
+    <main class="examples">
+        <section class="demo-card" aria-labelledby="basic-title">
+            <div class="demo-heading">
+                <span class="number">01</span>
+                <div><h2>Một item phát triển</h2><code>item 2: flex-grow: 1;</code></div>
+            </div>
+            <p>Cả năm item có cùng kích thước cơ sở. Item 2 nhận phần không gian còn trống; bốn item kia giữ kích thước cơ sở.</p>
+            <div class="track basic-track" aria-label="Năm Flex Item, item thứ hai nhận phần không gian còn lại">
+                <div class="item">Item 1</div>
+                <div class="item grow-target">Item 2 <small>grow 1</small></div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+            </div>
+            <div class="legend"><span><i class="dot blue"></i> Kích thước cơ sở</span><span><i class="dot indigo"></i> Phần được tăng thêm</span></div>
+        </section>
+
+        <section class="demo-card" aria-labelledby="ratio-title">
+            <div class="demo-heading">
+                <span class="number">02</span>
+                <div><h2>So sánh tỷ lệ grow</h2><code>item 2: flex-grow: 3;</code></div>
+            </div>
+            <p>Ở ví dụ này các item đều có <code>flex-grow: 1</code>, riêng Item 2 có giá trị 3 nên nhận phần không gian gấp ba lần mỗi item khác.</p>
+            <div class="track ratio-track" aria-label="Năm Flex Item với hệ số tăng một, ba, một, một, một">
+                <div class="item ratio-item">Item 1 <small>grow 1</small></div>
+                <div class="item ratio-item ratio-target">Item 2 <small>grow 3</small></div>
+                <div class="item ratio-item">Item 3 <small>grow 1</small></div>
+                <div class="item ratio-item">Item 4 <small>grow 1</small></div>
+                <div class="item ratio-item">Item 5 <small>grow 1</small></div>
+            </div>
+            <div class="formula"><span>Tỷ lệ phần không gian thêm</span><strong>1 : 3 : 1 : 1 : 1</strong></div>
+        </section>
+
+        <aside class="info-note">
+            <span class="note-mark">i</span>
+            <p><strong>Ghi nhớ:</strong> <code>flex-grow</code> chỉ tác động lên Flex Item. Giá trị mặc định là <code>0</code>; <code>initial</code> đưa về 0 và <code>inherit</code> kế thừa giá trị từ phần tử cha.</p>
+        </aside>
+    </main>
+
+    <footer>Thực hành CSS Flexbox <span>·</span> <code>flex-grow</code></footer>
+</body>
+</html>
