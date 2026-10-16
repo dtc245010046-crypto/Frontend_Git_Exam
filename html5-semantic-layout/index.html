@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICTU Campus — Layout HTML5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header" id="home">
+        <a class="brand" href="#home" aria-label="ICTU Campus, trang chủ">
+            <span class="brand-mark" aria-hidden="true">I</span>
+            <span><strong>ICTU CAMPUS</strong><small>Kết nối tri thức · Khơi nguồn sáng tạo</small></span>
+        </a>
+        <div class="header-message">
+            <span>CÙNG NHAU TIẾN BƯỚC</span>
+            <strong>Mỗi ngày một điều mới</strong>
+        </div>
+    </header>
+
+    <nav class="primary-nav" aria-label="Điều hướng chính">
+        <a class="active" href="#home">Trang chủ</a>
+        <a href="#students">Sinh viên</a>
+        <a href="#courses">Khóa học</a>
+        <a href="#news">Tin tức</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <main class="page-layout">
+        <aside class="left-sidebar" aria-labelledby="menu-title">
+            <section class="sidebar-section">
+                <h2 id="menu-title">Danh mục</h2>
+                <ul>
+                    <li><a href="#news">✦ <span>Tin nổi bật</span></a></li>
+                    <li><a href="#students">♧ <span>Góc sinh viên</span></a></li>
+                    <li><a href="#courses">▤ <span>Chương trình học</span></a></li>
+                    <li><a href="#events">◷ <span>Lịch sự kiện</span></a></li>
+                    <li><a href="#contact">↗ <span>Hỗ trợ</span></a></li>
+                </ul>
+            </section>
+            <section class="student-card" id="students">
+                <span class="student-icon" aria-hidden="true">🎓</span>
+                <h2>Góc sinh viên</h2>
+                <p>Khám phá hoạt động, câu lạc bộ và cơ hội dành cho bạn.</p>
+                <a href="#news">Tìm hiểu thêm →</a>
+            </section>
+        </aside>
+
+        <section class="main-content" aria-labelledby="welcome-title">
+            <article class="featured-article" id="news">
+                <div class="featured-art" aria-hidden="true">
+                    <span class="orbit orbit-one"></span>
+                    <span class="orbit orbit-two"></span>
+                    <span class="featured-book">📚</span>
+                    <span class="featured-star">✦</span>
+                </div>
+                <div class="featured-copy">
+                    <span class="eyebrow">TIN NỔI BẬT</span>
+                    <h1 id="welcome-title">Chào mừng đến với không gian học tập mới</h1>
+                    <p>Cập nhật những hoạt động, câu chuyện và cơ hội học tập đang diễn ra tại ICTU.</p>
+                    <a class="button-link" href="#latest-news">Đọc tin <span aria-hidden="true">→</span></a>
+                </div>
+            </article>
+
+            <section class="latest-news" id="latest-news" aria-labelledby="latest-title">
+                <header class="section-heading">
+                    <div><span class="eyebrow">CẬP NHẬT MỖI NGÀY</span><h2 id="latest-title">Tin mới nhất</h2></div>
+                    <a href="#latest-news">Xem tất cả →</a>
+                </header>
+                <article class="news-item">
+                    <span class="news-icon mint" aria-hidden="true">💻</span>
+                    <div>
+                        <p class="news-meta">HỌC TẬP · 16 THÁNG 10, 2026</p>
+                        <h3 id="courses">Bắt đầu hành trình khám phá công nghệ web</h3>
+                        <p>Cùng tìm hiểu cách những dòng mã tạo nên các trang web gần gũi mỗi ngày.</p>
+                    </div>
+                    <a href="#courses" aria-label="Đọc tin về công nghệ web">↗</a>
+                </article>
+                <article class="news-item">
+                    <span class="news-icon lilac" aria-hidden="true">🌱</span>
+                    <div>
+                        <p class="news-meta">CỘNG ĐỒNG · 12 THÁNG 10, 2026</p>
+                        <h3>Tuần lễ câu lạc bộ và hoạt động sinh viên</h3>
+                        <p>Gặp gỡ bạn mới, chia sẻ sở thích và cùng tham gia các hoạt động ý nghĩa.</p>
+                    </div>
+                    <a href="#students" aria-label="Đọc tin về hoạt động sinh viên">↗</a>
+                </article>
+                <article class="news-item" id="events">
+                    <span class="news-icon peach" aria-hidden="true">🗓️</span>
+                    <div>
+                        <p class="news-meta">SỰ KIỆN · 08 THÁNG 10, 2026</p>
+                        <h3>Những sự kiện đáng chú ý trong tháng</h3>
+                        <p>Lưu lại lịch và chuẩn bị tham gia các chương trình sắp tới.</p>
+                    </div>
+                    <a href="#events" aria-label="Xem các sự kiện trong tháng">↗</a>
+                </article>
+            </section>
+        </section>
+
+        <aside class="right-sidebar" aria-label="Thông tin bên lề">
+            <section class="widget calendar-widget" aria-labelledby="calendar-title">
+                <header class="widget-heading"><h2 id="calendar-title">Lịch tháng 10</h2><span>2026</span></header>
+                <div class="calendar-grid" aria-label="Lịch tháng 10 năm 2026">
+                    <span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span>
+                    <span class="muted-day">28</span><span class="muted-day">29</span><span class="muted-day">30</span><span class="muted-day">1</span><span>2</span><span>3</span><span>4</span>
+                    <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+                    <span>12</span><span>13</span><span>14</span><span>15</span><span class="today">16</span><span>17</span><span>18</span>
+                    <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+                    <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span class="muted-day">1</span>
+                </div>
+            </section>
+            <section class="widget community-widget" aria-labelledby="community-title">
+                <header class="widget-heading"><h2 id="community-title">Cộng đồng</h2><span class="live-dot">●</span></header>
+                <strong class="member-count">12.480<span>+</span></strong>
+                <p>thành viên đang học tập và kết nối</p>
+                <div class="progress-track"><span></span></div>
+                <div class="progress-labels"><span>Học hỏi</span><span>Phát triển</span></div>
+            </section>
+            <section class="widget campus-widget" aria-labelledby="campus-title">
+                <header class="widget-heading"><h2 id="campus-title">Khuôn viên</h2><span>↗</span></header>
+                <div class="campus-map" role="img" aria-label="Minh họa bản đồ khuôn viên với vị trí thư viện">
+                    <span class="map-road road-one"></span><span class="map-road road-two"></span>
+                    <span class="map-park park-one"></span><span class="map-park park-two"></span>
+                    <span class="map-pin">●</span><span class="map-label">Thư viện</span>
+                </div>
+                <p>Đại học Công nghệ Thông tin và Truyền thông</p>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div><strong>ICTU CAMPUS</strong><span>Không gian thông tin và kết nối sinh viên</span></div>
+        <nav aria-label="Liên kết cuối trang"><a href="#home">Giới thiệu</a><a href="#contact">Điều khoản</a><a href="#contact">Quyền riêng tư</a></nav>
+        <small>© 2026 · Bài thực hành HTML5 &amp; CSS</small>
+    </footer>
+</body>
+</html>
