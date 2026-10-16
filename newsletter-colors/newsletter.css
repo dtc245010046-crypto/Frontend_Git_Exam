@@ -1,0 +1,257 @@
+/* ==========================================================================
+   Newsletter Core Responsive Styles
+   Áp dụng biến CSS (CSS Variables) để linh hoạt phối màu theo Adobe Color
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg, #f4f6f8);
+  color: var(--text-color, #333333);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Thanh điều hướng chuyển đổi theme */
+.theme-switch-bar {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.theme-switch-bar a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.theme-switch-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Khối Newsletter chính */
+.newsletter-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  background-color: var(--card-bg, #ffffff);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color, #e2e8f0);
+}
+
+/* Header */
+.newsletter-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: var(--header-text, #ffffff);
+  padding: 44px 32px;
+  text-align: center;
+  position: relative;
+}
+
+.newsletter-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.newsletter-header p {
+  font-size: 16px;
+  opacity: 0.95;
+  margin-bottom: 0;
+}
+
+/* Tag palette info */
+.palette-badge {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--accent-text, #ffffff);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+/* Nội dung bản tin */
+.newsletter-body {
+  padding: 36px 32px;
+}
+
+.intro-section {
+  border-bottom: 1px dashed var(--border-color, #e2e8f0);
+  padding-bottom: 28px;
+  margin-bottom: 32px;
+}
+
+.intro-title {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.intro-text {
+  color: var(--text-muted, #555555);
+  font-size: 15.5px;
+  margin-bottom: 20px;
+}
+
+/* Nút kêu gọi hành động (CTA Button) */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--primary-color);
+  color: var(--btn-text, #ffffff) !important;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  box-shadow: 0 4px 14px var(--primary-shadow, rgba(0, 123, 255, 0.3));
+}
+
+.btn-cta:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0 6px 18px var(--primary-shadow, rgba(0, 123, 255, 0.4));
+  transform: translateY(-2px);
+}
+
+/* Feature Cards */
+.feature-card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+.card-style-secondary {
+  background-color: var(--secondary-bg, #f1f5f9);
+  border: 1px solid var(--secondary-border, #cbd5e1);
+  color: var(--text-color, #1e293b);
+}
+
+.card-style-secondary .card-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.card-style-accent {
+  background-color: var(--accent-bg, #ecfdf5);
+  border: 1px solid var(--accent-border, #a7f3d0);
+  color: var(--text-color, #064e3b);
+}
+
+.card-style-accent .card-title {
+  color: var(--accent-dark, #047857);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.feature-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.card-style-secondary .feature-icon-box {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: var(--primary-color);
+}
+
+.card-style-accent .feature-icon-box {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: var(--accent-dark, #047857);
+}
+
+/* Callout highlight block */
+.newsletter-callout {
+  background-color: var(--highlight-bg, #fef3c7);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 0 10px 10px 0;
+  padding: 18px 20px;
+  margin: 28px 0;
+  font-size: 14.5px;
+  color: var(--text-color);
+}
+
+/* Footer */
+.newsletter-footer {
+  background-color: var(--footer-bg, #1e293b);
+  color: var(--footer-text, #94a3b8);
+  padding: 28px 32px;
+  text-align: center;
+  font-size: 13.5px;
+  border-top: 1px solid var(--border-color, #e2e8f0);
+}
+
+.footer-social-links a {
+  display: inline-block;
+  color: var(--footer-link, #cbd5e1);
+  margin: 0 8px;
+  font-size: 13.5px;
+  text-decoration: none;
+}
+
+.footer-social-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.color-palette-guide {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .newsletter-header {
+    padding: 32px 20px;
+  }
+  .newsletter-body {
+    padding: 24px 18px;
+  }
+  .newsletter-header h1 {
+    font-size: 24px;
+  }
+  .intro-title {
+    font-size: 19px;
+  }
+}
