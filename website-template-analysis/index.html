@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bản thực hành bố cục website giới thiệu sản phẩm theo cấu trúc header, navigation, content và footer.">
+    <title>Nova Phone — Công nghệ trong tầm tay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header" id="top">
+        <a class="brand" href="#top" aria-label="Nova, về đầu trang">nova<span>.</span></a>
+        <nav class="global-nav" aria-label="Điều hướng chính">
+            <a href="#models">Sản phẩm</a>
+            <a href="#experience">Trải nghiệm</a>
+            <a href="#features">Công nghệ</a>
+            <a href="#footer">Hỗ trợ</a>
+        </nav>
+        <a class="header-cta" href="#models">Khám phá <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <nav class="product-nav" aria-label="Điều hướng Nova Phone">
+        <a class="product-name" href="#top">Nova Phone</a>
+        <div class="product-links">
+            <a href="#experience">Tổng quan</a>
+            <a href="#models">Các phiên bản</a>
+            <a href="#features">Tính năng</a>
+            <a href="#footer">Thông số</a>
+        </div>
+        <a class="buy-link" href="#models">Chọn phiên bản</a>
+    </nav>
+
+    <main>
+        <section class="hero" id="experience" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">GỌN TRONG TAY · MỞ RA THẾ GIỚI</p>
+                <h1 id="hero-title">Công nghệ<br>trong tầm tay.</h1>
+                <p class="hero-description">Một thiết kế tinh giản, hiệu năng mạnh mẽ và những trải nghiệm được tạo nên để đồng hành cùng nhịp sống của bạn.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#models">Khám phá Nova</a>
+                    <a class="text-link" href="#features">Tìm hiểu tính năng <span aria-hidden="true">→</span></a>
+                </div>
+                <p class="hero-note">Nova Phone Series · Thế hệ mới</p>
+            </div>
+            <div class="hero-art" role="img" aria-label="Minh họa điện thoại Nova với màn hình chuyển sắc xanh tím">
+                <div class="glow glow-one"></div>
+                <div class="glow glow-two"></div>
+                <div class="phone phone-back"><span class="camera camera-one"></span><span class="camera camera-two"></span><span class="camera camera-three"></span></div>
+                <div class="phone phone-front"><div class="screen"><span class="screen-orb"></span><span class="screen-wave"></span><span class="dynamic-island"></span></div></div>
+                <span class="art-caption">01 / 03&nbsp;&nbsp; A new point of view</span>
+            </div>
+        </section>
+
+        <section class="models section-wrap" id="models" aria-labelledby="models-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CHỌN PHIÊN BẢN CỦA BẠN</p>
+                    <h2 id="models-title">Tìm chiếc Nova phù hợp.</h2>
+                </div>
+                <a class="text-link" href="#footer">So sánh các phiên bản <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="model-grid">
+                <article class="model-card model-card-light">
+                    <div class="mini-device device-blue" aria-hidden="true"><span></span></div>
+                    <p class="model-kicker">Mỏng nhẹ mỗi ngày</p>
+                    <h3>Nova Air</h3>
+                    <p>Thanh lịch, linh hoạt và sẵn sàng cho mọi hành trình.</p>
+                    <a href="#footer">Tìm hiểu thêm <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="model-card model-card-dark">
+                    <div class="mini-device device-violet" aria-hidden="true"><span></span></div>
+                    <p class="model-kicker">Sức mạnh chuyên nghiệp</p>
+                    <h3>Nova Pro</h3>
+                    <p>Hiệu năng cao cấp cho những ý tưởng không giới hạn.</p>
+                    <a href="#footer">Tìm hiểu thêm <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="model-card model-card-warm">
+                    <div class="mini-device device-sand" aria-hidden="true"><span></span></div>
+                    <p class="model-kicker">Thiết yếu, trọn vẹn</p>
+                    <h3>Nova</h3>
+                    <p>Những tính năng bạn yêu thích, trong thiết kế thân thiện.</p>
+                    <a href="#footer">Tìm hiểu thêm <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="feature-banner" id="features">
+            <div class="feature-copy">
+                <p class="eyebrow">TẠO NÊN ĐIỀU KHÁC BIỆT</p>
+                <h2>Mỗi khoảnh khắc,<br>đều rõ nét.</h2>
+                <p>Camera thông minh giúp lưu giữ màu sắc chân thực, ánh sáng tự nhiên và những chi tiết bạn muốn nhớ lâu hơn.</p>
+                <a class="text-link" href="#footer">Khám phá camera Nova <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="feature-visual" aria-hidden="true">
+                <div class="lens lens-large"></div><div class="lens lens-small"></div>
+                <span class="visual-label">DESIGNED FOR YOUR EVERYDAY</span>
+            </div>
+        </section>
+
+        <section class="closing section-wrap">
+            <p class="eyebrow">SẴN SÀNG CHO BƯỚC TIẾP THEO?</p>
+            <h2>Điều tuyệt vời bắt đầu<br>từ một lựa chọn.</h2>
+            <a class="button button-primary" href="#models">Chọn Nova của bạn</a>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+        <div class="footer-top">
+            <a class="brand footer-brand" href="#top">nova<span>.</span></a>
+            <p>Thiết kế cho những điều bạn muốn làm tiếp theo.</p>
+        </div>
+        <div class="footer-columns">
+            <div><h2>Sản phẩm</h2><a href="#models">Nova Air</a><a href="#models">Nova Pro</a><a href="#models">Nova</a></div>
+            <div><h2>Khám phá</h2><a href="#experience">Tổng quan</a><a href="#features">Công nghệ</a><a href="#models">So sánh</a></div>
+            <div><h2>Hỗ trợ</h2><a href="#footer">Câu hỏi thường gặp</a><a href="#footer">Chính sách bảo hành</a><a href="#footer">Liên hệ</a></div>
+            <div class="footer-contact"><h2>Kết nối với Nova</h2><p>Nhận tin tức về sản phẩm và trải nghiệm mới.</p><a class="text-link" href="mailto:hello@nova.example">hello@nova.example <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 Nova Studio. Bản quyền thuộc về Nova.</p><a href="#top">Trở về đầu trang ↑</a></div>
+    </footer>
+</body>
+</html>
