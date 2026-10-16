@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: #202b42;
+    background: #f2f5f9;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page-shell {
+    display: flex;
+    flex-direction: column;
+    width: min(1180px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 30px;
+    background: #fff;
+    box-shadow: 0 0 52px rgb(22 42 83 / 5%);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 76px;
+    border-bottom: 1px solid #e8edf4;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Space Grotesk", Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.brand-mark {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+    border-radius: 12px;
+    color: #fff;
+    background: #405fe5;
+}
+
+.header-copy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8290a5;
+    font-size: 11px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #41b586;
+    box-shadow: 0 0 0 4px #e6f6ef;
+}
+
+.navigation {
+    display: flex;
+    align-items: stretch;
+    gap: 28px;
+    min-height: 52px;
+    border-bottom: 1px solid #e8edf4;
+}
+
+.navigation a {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    color: #78859a;
+    font-size: 11px;
+    font-weight: 600;
+    transition: color .18s ease, border-color .18s ease;
+}
+
+.navigation a:hover,
+.navigation a.selected {
+    border-bottom-color: #405fe5;
+    color: #405fe5;
+}
+
+.main-layout {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 28px;
+    padding: 32px 0 40px;
+}
+
+.sidebar {
+    display: flex;
+    flex: 0 0 270px;
+    flex-direction: column;
+    gap: 14px;
+    order: 1;
+}
+
+.content {
+    flex: 1 1 0;
+    min-width: 0;
+    order: 2;
+}
+
+.sidebar-card,
+.sidebar-highlight {
+    padding: 21px;
+    border: 1px solid #e4e9f1;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.label {
+    margin: 0 0 8px;
+    color: #8491a7;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .13em;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Space Grotesk", Arial, sans-serif;
+}
+
+.sidebar-card h2,
+.section-heading h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.side-link {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 7px;
+    padding: 10px;
+    border-radius: 9px;
+    color: #6e7b91;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.side-link:hover,
+.side-link.active {
+    color: #3559dd;
+    background: #eef2ff;
+}
+
+.side-icon {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    border-radius: 7px;
+    background: rgb(255 255 255 / 75%);
+    font-size: 13px;
+}
+
+.sidebar-highlight {
+    margin-top: auto;
+    border-color: #e3e9ff;
+    background: #f3f6ff;
+}
+
+.sparkle {
+    display: block;
+    margin-bottom: 13px;
+    color: #4568ed;
+    font-size: 20px;
+}
+
+.sidebar-highlight h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.sidebar-highlight > p:last-child {
+    margin: 8px 0 0;
+    color: #73809a;
+    font-size: 10px;
+    line-height: 1.65;
+}
+
+.welcome-panel {
+    position: relative;
+    min-height: 263px;
+    overflow: hidden;
+    padding: 31px 34px;
+    border: 1px solid #dce6ff;
+    border-radius: 18px;
+    background: linear-gradient(112deg, #edf2ff, #f5f7ff 65%, #edf9f5);
+}
+
+.welcome-panel > :not(.welcome-decoration) {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-panel h1 {
+    max-width: 490px;
+    margin: 0;
+    font-size: clamp(29px, 4vw, 40px);
+    letter-spacing: -.045em;
+    line-height: 1.12;
+}
+
+.welcome-panel h1 span {
+    color: #4568ed;
+}
+
+.welcome-panel > p:not(.label) {
+    max-width: 470px;
+    margin: 12px 0 0;
+    color: #6e7c94;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.primary-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 17px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #fff;
+    background: #405fe5;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.primary-link:hover {
+    background: #2f4dcc;
+}
+
+.welcome-decoration {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    width: 170px;
+    height: 170px;
+    border: 1px solid rgb(76 110 231 / 22%);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.decoration-two {
+    right: 11%;
+    width: 112px;
+    height: 112px;
+    border-color: rgb(73 166 142 / 38%);
+}
+
+.lesson-section {
+    margin-top: 27px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 13px;
+}
+
+.section-heading .label {
+    margin-bottom: 4px;
+}
+
+.section-count {
+    color: #8a96aa;
+    font-size: 9px;
+}
+
+.lesson-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.lesson-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid #e6eaf1;
+    border-radius: 12px;
+    background: #fff;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgb(32 52 94 / 7%);
+}
+
+.lesson-number {
+    display: grid;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 11px;
+    font-family: "Space Grotesk", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.lesson-number.blue { color: #405fe5; background: #edf2ff; }
+.lesson-number.violet { color: #7858cf; background: #f1edff; }
+.lesson-number.mint { color: #258966; background: #e6f6ef; }
+
+.lesson-info {
+    min-width: 0;
+}
+
+.lesson-info h3 {
+    margin: 0;
+    font-size: 12px;
+}
+
+.lesson-info p {
+    margin: 4px 0 0;
+    color: #7d899d;
+    font-size: 9px;
+}
+
+.lesson-arrow {
+    margin-left: auto;
+    color: #8b97aa;
+    font-size: 14px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid #e8edf4;
+    color: #8490a4;
+    font-size: 9px;
+}
+
+.footer a {
+    color: #405fe5;
+    font-weight: 600;
+}
+
+@media (max-width: 760px) {
+    .page-shell {
+        padding: 0 20px;
+    }
+
+    .main-layout {
+        gap: 18px;
+        padding: 24px 0 30px;
+    }
+
+    .sidebar {
+        flex-basis: 220px;
+    }
+
+    .welcome-panel {
+        padding: 26px 23px;
+    }
+
+    .welcome-decoration {
+        right: -50px;
+    }
+}
+
+@media (max-width: 620px) {
+    .page-shell {
+        padding: 0 15px;
+    }
+
+    .header {
+        min-height: 68px;
+    }
+
+    .header-copy {
+        font-size: 9px;
+    }
+
+    .navigation {
+        gap: 22px;
+        min-height: 48px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .navigation a {
+        flex: 0 0 auto;
+    }
+
+    .main-layout {
+        flex-direction: column;
+        gap: 16px;
+        padding: 19px 0 26px;
+    }
+
+    .sidebar,
+    .content {
+        flex: 1 1 auto;
+        width: 100%;
+        order: initial;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .sidebar-card,
+    .sidebar-highlight {
+        flex: 1 1 0;
+        padding: 16px;
+    }
+
+    .sidebar-highlight {
+        margin-top: 0;
+    }
+
+    .side-link {
+        gap: 7px;
+        padding: 8px 5px;
+        font-size: 9px;
+    }
+
+    .side-icon {
+        flex: 0 0 22px;
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 430px) {
+    .sidebar {
+        flex-direction: column;
+    }
+
+    .side-link {
+        font-size: 10px;
+    }
+
+    .welcome-panel {
+        min-height: 245px;
+        padding: 23px 19px;
+    }
+
+    .welcome-panel h1 {
+        font-size: 31px;
+    }
+
+    .welcome-decoration {
+        right: -90px;
+        top: 60%;
+        opacity: .65;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}

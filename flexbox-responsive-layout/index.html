@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bố cục responsive bằng Flexbox với header, navigation, sidebar, nội dung và footer.">
+    <title>Bố cục responsive bằng Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="header" id="top">
+            <a class="brand" href="#top"><span class="brand-mark">L</span><span>Learn / Lab</span></a>
+            <div class="header-copy"><span class="status-dot"></span> Cùng nhau học điều mới</div>
+        </header>
+
+        <nav class="navigation" aria-label="Điều hướng chính">
+            <a class="selected" href="#home">Tổng quan</a>
+            <a href="#lessons">Bài học</a>
+            <a href="#resources">Tài nguyên</a>
+            <a href="#community">Cộng đồng</a>
+        </nav>
+
+        <div class="main-layout" id="home">
+            <aside class="sidebar">
+                <section class="sidebar-card">
+                    <p class="label">ĐƯỜNG DẪN NHANH</p>
+                    <h2>Khám phá</h2>
+                    <a class="side-link active" href="#lessons"><span class="side-icon">↗</span><span>Bài học mới</span></a>
+                    <a class="side-link" href="#resources"><span class="side-icon">◇</span><span>Bộ sưu tập</span></a>
+                    <a class="side-link" href="#community"><span class="side-icon">◎</span><span>Thảo luận</span></a>
+                </section>
+                <section class="sidebar-highlight">
+                    <span class="sparkle">✦</span>
+                    <p class="label">GỢI Ý HÔM NAY</p>
+                    <h3>Học từng bước nhỏ</h3>
+                    <p>Dành 20 phút mỗi ngày để biến kiến thức thành thói quen.</p>
+                </section>
+            </aside>
+
+            <main class="content" id="lessons">
+                <section class="welcome-panel">
+                    <p class="label">LEARN / LAB · SỐ 08</p>
+                    <h1>Học hôm nay,<br><span>xây ngày mai.</span></h1>
+                    <p>Một góc nhỏ dành cho những ý tưởng, bài học và dự án giúp bạn tiến bộ mỗi ngày.</p>
+                    <a class="primary-link" href="#resources">Bắt đầu khám phá <span aria-hidden="true">→</span></a>
+                    <span class="welcome-decoration decoration-one"></span>
+                    <span class="welcome-decoration decoration-two"></span>
+                </section>
+
+                <section class="lesson-section" id="resources">
+                    <div class="section-heading"><div><p class="label">BẮT ĐẦU TỪ ĐÂU?</p><h2>Chủ đề đang học</h2></div><span class="section-count">03 chủ đề</span></div>
+                    <div class="lesson-list">
+                        <article class="lesson-card">
+                            <span class="lesson-number blue">01</span>
+                            <div class="lesson-info"><h3>Nền tảng HTML</h3><p>Xây bộ khung và nội dung cho trang web.</p></div>
+                            <span class="lesson-arrow" aria-hidden="true">↗</span>
+                        </article>
+                        <article class="lesson-card">
+                            <span class="lesson-number violet">02</span>
+                            <div class="lesson-info"><h3>CSS & bố cục</h3><p>Tạo giao diện hài hòa trên nhiều màn hình.</p></div>
+                            <span class="lesson-arrow" aria-hidden="true">↗</span>
+                        </article>
+                        <article class="lesson-card" id="community">
+                            <span class="lesson-number mint">03</span>
+                            <div class="lesson-info"><h3>JavaScript nhập môn</h3><p>Thêm hành vi và tương tác cho website.</p></div>
+                            <span class="lesson-arrow" aria-hidden="true">↗</span>
+                        </article>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <span>© 2026 Learn / Lab</span>
+            <span>Thực hành bố cục responsive bằng Flexbox</span>
+            <a href="#top">Trở về đầu trang ↑</a>
+        </footer>
+    </div>
+</body>
+</html>
