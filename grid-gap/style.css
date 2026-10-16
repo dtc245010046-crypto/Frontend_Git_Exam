@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: #19243b;
+    background: #f3f6fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+}
+
+code {
+    color: #315fe8;
+    font-family: "Space Mono", Consolas, monospace;
+}
+
+.hero {
+    padding: 54px max(22px, calc((100% - 1060px) / 2)) 40px;
+    color: #f8faff;
+    background: #17264a;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: #96b2ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.2;
+}
+
+h1 code {
+    color: #a8c1ff;
+    font-size: .84em;
+}
+
+.hero > p:last-child {
+    max-width: 700px;
+    margin: 16px 0 0;
+    color: #d1daf0;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+    gap: 22px;
+    width: min(1080px, calc(100% - 40px));
+    margin: 32px auto 22px;
+}
+
+.example-card {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #e1e7f1;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 32px rgb(22 42 83 / 6%);
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.number {
+    display: grid;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 12px;
+    color: #315fe8;
+    background: #edf2ff;
+    font-family: "Space Mono", Consolas, monospace;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+}
+
+.section-heading code {
+    font-size: 12px;
+}
+
+.example-card > p {
+    min-height: 50px;
+    margin: 18px 0;
+    color: #66728a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    padding: 12px;
+    border: 1px dashed #bac7de;
+    border-radius: 12px;
+    background: #f7f9fd;
+}
+
+.equal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+
+.different-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 30px 10px;
+}
+
+.grid-item {
+    display: grid;
+    min-height: 76px;
+    place-items: center;
+    border: 1px solid #b7d5f4;
+    border-radius: 9px;
+    color: #23415e;
+    background: #cfe8ff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.grid-item.green {
+    border-color: #b9e0c4;
+    color: #24503a;
+    background: #d7f1df;
+}
+
+.equivalent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 5px 10px;
+    margin-top: 14px;
+    color: #77839a;
+    font-size: 11px;
+}
+
+.equivalent code {
+    font-size: 10px;
+}
+
+.note {
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto 24px;
+    padding: 16px 18px;
+    border: 1px solid #d9e3fb;
+    border-radius: 12px;
+    color: #475878;
+    background: #eaf0ff;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 18px 22px 24px;
+    color: #77839a;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer span {
+    padding: 0 5px;
+}
+
+@media (max-width: 520px) {
+    .hero {
+        padding: 40px 22px 32px;
+    }
+
+    .hero > p:last-child {
+        font-size: 15px;
+    }
+
+    .examples,
+    .note {
+        width: calc(100% - 24px);
+    }
+
+    .examples {
+        gap: 14px;
+        margin-top: 18px;
+    }
+
+    .example-card {
+        padding: 18px 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .example-card > p {
+        min-height: 0;
+    }
+
+    .grid-item {
+        min-height: 64px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hai ví dụ CSS Grid về cách đặt khoảng cách bằng thuộc tính grid-gap.">
+    <title>Thực hành CSS Grid | grid-gap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <p class="eyebrow">CSS GRID · THỰC HÀNH</p>
+        <h1>Khoảng cách lưới với <code>grid-gap</code></h1>
+        <p>Thuộc tính viết tắt này đặt khoảng cách giữa các hàng và cột trong một Grid.</p>
+    </header>
+
+    <main class="examples">
+        <section class="example-card" aria-labelledby="equal-title">
+            <div class="section-heading">
+                <span class="number">01</span>
+                <div>
+                    <h2 id="equal-title">Khoảng cách bằng nhau</h2>
+                    <code>grid-gap: 20px;</code>
+                </div>
+            </div>
+            <p>Giá trị đơn áp dụng cùng một khoảng cách 20px cho cả hàng và cột.</p>
+            <div class="grid equal-grid" aria-label="Lưới hai cột có khoảng cách hàng và cột đều 20 pixel">
+                <div class="grid-item">Ô 1</div><div class="grid-item">Ô 2</div>
+                <div class="grid-item">Ô 3</div><div class="grid-item">Ô 4</div>
+            </div>
+            <div class="equivalent"><span>Tương đương</span><code>row-gap: 20px; column-gap: 20px;</code></div>
+        </section>
+
+        <section class="example-card" aria-labelledby="different-title">
+            <div class="section-heading">
+                <span class="number">02</span>
+                <div>
+                    <h2 id="different-title">Khoảng cách khác nhau</h2>
+                    <code>grid-gap: 30px 10px;</code>
+                </div>
+            </div>
+            <p>Giá trị thứ nhất đặt khoảng cách hàng 30px; giá trị thứ hai đặt khoảng cách cột 10px.</p>
+            <div class="grid different-grid" aria-label="Lưới ba cột, khoảng cách hàng 30 pixel và khoảng cách cột 10 pixel">
+                <div class="grid-item green">Ô 1</div><div class="grid-item green">Ô 2</div><div class="grid-item green">Ô 3</div>
+                <div class="grid-item green">Ô 4</div><div class="grid-item green">Ô 5</div><div class="grid-item green">Ô 6</div>
+            </div>
+            <div class="equivalent"><span>Tương đương</span><code>row-gap: 30px; column-gap: 10px;</code></div>
+        </section>
+    </main>
+
+    <aside class="note"><strong>Lưu ý:</strong> Trong CSS hiện đại, <code>gap</code> là tên viết tắt phổ biến hơn và dùng được với Grid lẫn Flexbox.</aside>
+    <footer>Thực hành CSS Grid <span>·</span> <code>grid-gap</code></footer>
+</body>
+</html>
